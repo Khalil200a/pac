@@ -29,6 +29,8 @@ class Produit(models.Model):
     titre_other = models.CharField(max_length=200, blank=True)
     desc_other = models.TextField(max_length=1000, blank=True)
     image = models.ImageField(upload_to='users/', null=True, blank=True)
+    height = models.CharField(max_length=200, blank=True)
+    width = models.CharField(max_length=200, blank=True)
 
 
     def __str__(self):
