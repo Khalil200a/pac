@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <div class="container-fluid">
+
+      <!-- Page Heading -->
+      <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+          <h1 class="h3 mb-0 text-gray-800">Formation :</h1>
+      </div>
+        {% if format %}
+    <ul>
+    {% for formation in format %}
+        <div><h2 class="h4 mb-0 text-gray-800">{{ formation.titre }}</h2>   </div>
+        <div > <h3 class = "h5 mb-0 text-gray-800"></h3> {{ formation.contenu }}</div>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <h3 class="h4 mb-0 text-gray-800">Aucune formation disponible.</h3>
+    {% endif %}
+    </div>    
+{% endblock content %}
