@@ -12,7 +12,7 @@ from django.views import generic
 
 
 class HomeView(TemplateView):
-    template_name = 'common/home.html'
+    template_name = 'index.html'
 
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'common/dashboard.html'
