@@ -1,3 +1,5 @@
+{% load static %}
+{% load crispy_forms_tags %}
 <!doctype html>
 <!--
 	Lamoda by TEMPLATE STOCK
@@ -9,7 +11,7 @@
 <html lang="en-gb" class="no-js">
   <head>
     <meta charset="utf-8">
-	<title>Lamoda Free Responsive Template | Template Stock</title>
+	<title>Proocess Automation Consulting</title>
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">		
@@ -19,21 +21,104 @@
       
 
      <!--styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.transitions.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" href="css/etlinefont.css">
-    <link href="css/style.css" type="text/css"  rel="stylesheet"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+      <style>
+          .sub-menu {
+                      display: flex;
+                      justify-content: center;
+                      overflow: hidden;
+                    }
 
+                    .sub-menu a {
+                      float: left;
+                      font-size: 16px;
+                      min-width: 90px;
+                      color: white;
+                      text-align: center;
+                      padding: 14px 16px;
+                      text-decoration: none;
+                      transition: all .5s;
+                    }
+
+                    .active {
+                      background: #2C3E50;
+                    }
+
+                    .sub-menu-nav {
+                      float: left;
+                      overflow: hidden;
+                    }
+
+                    .sub-menu-nav .nav-btn {
+                      cursor:pointer;
+                      min-width: 120px;
+                      font-size: 16px;
+                      border: none;
+                      outline: none;
+                      color: white;
+                      padding: 14px 16px;
+                      background-color: inherit;
+                      font-family: inherit;
+                      margin: 0;
+                      margin-top: 5px;
+                      transition: all .5s;
+                    }
+
+                    .sub-menu a:hover, .sub-menu-nav:hover .nav-btn {
+                      background-color: #2C3E50;
+                    }
+
+                    .sub-menu-alt {
+                      display: none;
+                      position: absolute;
+                      background-color: #2C3E50;
+                      z-index: 1;
+                    }
+
+                    .sub-menu-alt a {
+                      min-width: 90px;
+                      float: left;
+                      color: white;
+                      text-decoration: none;
+                    }
+
+                    .sub-menu-alt a:hover {
+                      background-color: #eee;
+                      color: #000;
+                    }
+
+                    .sub-menu-nav:hover .sub-menu-alt {
+                      display: block;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                      .sub-menu {
+                          flex-direction: column;
+                      }
+                      .sub-menu-nav {
+                        text-align:center;
+                        width:100%;
+                      }
+                      .nav-btn {
+                        width:100%;
+                      }
+                    }
+      </style>
 
    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
+        <script src="{% static 'js/html5shiv.js' %}"></script>
+        <script src="{% static 'js/respond.min.js' %}"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
+        </script>
         <![endif]-->
     
 	<body  data-spy="scroll" data-target="#main-menu">
@@ -42,7 +127,7 @@
   <!--Start Page loader -->
   <div id="pageloader">   
         <div class="loader">
-          <img src="images/progress.gif" alt='loader' />
+          <img src="{% static 'images/progress.gif' %}" alt='loader' />
         </div>
    </div>
    <!--End Page loader -->
@@ -62,38 +147,63 @@
                             <!--Start Logo -->
 							<div class="logo-nav">
 								<a href="index.html">
-									<img src="images/logo.png" alt="Company logo" />
+									<img src="{% static 'images/apple-touch-icon.png' %}" alt="Company logo" height="50px" width="80px" />
 								</a>
 							</div>
                             <!--End Logo -->
 							<div class="clear-toggle"></div>
-							<div id="main-menu" class="collapse scroll navbar-right">
-								<ul class="nav">
-                                
-									<li class="active"> <a href="#home">Home</a> </li>
-									
-									<li> <a href="#about">About</a> </li>
-                                    
-                                    <li> <a href="#history">History</a> </li>
-                                    
-                                    <li> <a href="#works">Our Work</a> </li>
-                                    
-                                     <li> <a href="#team">Team</a> </li>
-                                   
-								    <li> <a href="#services">Services</a> </li>
-																		
-									<li> <a href="#blog">Blog</a></li>
-                                    
-                                    <li> <a href="#testimonials">Testimonials</a></li>
-                                     
-									<li> <a href="#contact">Contact</a> </li>
-										
-								</ul>
-							</div><!-- end main-menu -->
-						</div>
-					</div>
-				</div>
-			</header>
+							<div class="sub-menu">
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#home'" class="nav-btn">Home</button>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#about'" class="nav-btn">About</button>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#produit'" class="nav-btn">Produit</button>
+                                    <div class="sub-menu-alt">
+                                      <a href="#">NXA PRO</a>
+                                      <a href="#">EAGLE</a>
+                                      <a href="#">FALCON</a>
+                                      <a href="#">MVX</a>
+                                      <a href="#">RT300</a>
+                                      <a href="#">NEST4.0</a>
+                                      <a href="#">BEARING DEFENDER</a>
+                                    </div>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button class="nav-btn">Prestations</button>
+                                    <div class="sub-menu-alt">
+                                      <a href="#">Partner 1</a>
+                                      <a href="#">Partner 2</a>
+                                    </div>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#services'" class="nav-btn">Formation</button>
+                                    <div class="sub-menu-alt">
+                                      <a href="#">Partner 1</a>
+                                      <a href="#">Partner 2</a>
+                                    </div>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#consulting'" class="nav-btn">Consulting</button>
+                                    <div class="sub-menu-alt">
+                                      <a href="#">Partner 1</a>
+                                      <a href="#">Partner 2</a>
+                                    </div>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#clients'" class="nav-btn">Réferences</button>
+                                  </div>
+                                  <div class="sub-menu-nav">
+                                    <button onclick="location.href='#contact'" class="nav-btn">Contact</button>
+                                  </div>
+                            </div>
+                        </div><!-- end main-menu -->
+                    </div>
+                </div>
+            </div>
+        </header>
     <!--End Navigation-->
 
       
@@ -107,10 +217,10 @@
                             <div class="container">
                                 <div class="big">Free Responsive Template </div>          
                                 <div class="small">Are you ready to buy this theme</div>
-                                <a href="#works" class="middle btn btn-white">VIEW PORTFOLIO</a>
+                                <a href="#produit" class="middle btn btn-white">VIEW PORTFOLIO</a>
                             </div>       
                         </div>
-                        <img src="images/slider/1.jpg" alt="">
+                        <img src="{% static 'images/slider/pump.jpg' %}" alt="">
                     </li>
                     
                     <li class="secondary">
@@ -118,10 +228,10 @@
                             <div class="container">                       
                                 <div class="big">Free Responsive Template </div>          
                                 <div class="small">Are you ready to buy this theme</div>
-                                <a href="#works" class=" middle btn btn-white">VIEW PORTFOLIO</a>
+                                <a href="#produit" class=" middle btn btn-white">VIEW PORTFOLIO</a>
                             </div>
                          </div>
-                        <img src="images/slider/2.jpg" alt="">
+                        <img src="{% static 'images/slider/shaft.jpg' %}" alt="">
                     </li>
                     
                     <li class="third">
@@ -129,10 +239,10 @@
                             <div class="container">                              
                                 <div class="big">Free Responsive Template </div>          
                                 <div class="small">Are you ready to buy this theme</div>
-                                <a href="#works" class="middle btn btn-white">VIEW PORTFOLIO</a>
+                                <a href="#produit" class="middle btn btn-white">VIEW PORTFOLIO</a>
                              </div>
                         </div>
-                        <img src="images/slider/3.jpg" alt="">
+                        <img src="{% static 'images/slider/service.jpg' %}" alt="">
                     </li>
                 </ul>
             </div>
@@ -378,9 +488,9 @@
                                           <!--  Start Carousel-->
                                           <div class="col-md-6">
                                               <div class="tab-carousel">
-                                                    <div class="item"><img src="images/works/img4.jpg" alt=""></div>
-                                                    <div class="item"><img src="images/works/img5.jpg" alt=""></div>
-                                                    <div class="item"><img src="images/works/img6.jpg" alt=""></div>						 
+                                                    <div class="item"><img src="{% static 'images/produit/EAGLE.jpg' %}" alt=""></div>
+                                                    <div class="item"><img src="{% static 'images/produit/MVX_MV-120.jpg' %}" alt=""></div>
+                                                    <div class="item"><img src="{% static 'images/produit/NESTI40.jpg' %}" alt=""></div>
                                               </div>
                                           </div>
                                           <!-- End Carousel-->                                            
@@ -395,7 +505,7 @@
                                             <div class="col-md-4">
                                                  <div class="tab2-services-box">
                                                      <div class="media">
-                                                         <img src="images/services1.jpg"  alt="services"/>
+                                                         <img src="{% static 'images/services1.jpg' %}"  alt="services"/>
                                                      </div>
                                                      
                                                      <div class="services-info">
@@ -409,7 +519,7 @@
                                            <div class="col-md-4">
                                                  <div class="tab2-services-box">
                                                      <div class="media">
-                                                         <img src="images/services2.jpg"  alt="services"/>
+                                                         <img src="{% static 'images/services2.jpg' %}"  alt="services"/>
                                                      </div>
                                                      
                                                      <div class="services-info">
@@ -423,7 +533,7 @@
                                             <div class="col-md-4">
                                                  <div class="tab2-services-box">
                                                      <div class="media">
-                                                         <img src="images/services3.jpg"  alt="services"/>
+                                                         <img src="{% static 'images/services3.jpg' %}"  alt="services"/>
                                                      </div>
                                                      
                                                      <div class="services-info">
@@ -477,7 +587,7 @@
                                            
                                            <!--Start Features Image-->
                                            <div class="col-md-4 hidden-xs m-bot-30">
-                                                <img src="images/device.png" alt="Features Image" />
+                                                <img src="{% static 'images/device.png' %}" alt="Features Image" />
                                            </div>
                                            <!--End Features Image-->
                                            
@@ -597,7 +707,7 @@ viverra purus tristique.</p>
                                                 
                                                 <div class="col-md-6">
                                                     <div class="devices-image">
-                                                        <img src="images/device-desktop.png" alt=""/>
+                                                        <img src="{% static 'images/device-desktop.png' %}" alt=""/>
                                                     </div>
                                                 </div>
                                                 
@@ -616,82 +726,12 @@ viverra purus tristique.</p>
       </div> <!--/.container-->
   </section>
   <!--End Section-->
-  
-   
-     <!--Start History-->
-    <section id="history" class="section parallax">
-		<div class="overlay"></div>
-            <div class="container">
-                
-                 <div class="title-box text-center white">
-                    <h2 class="title">History</h2>
-                 </div>
-                 
-                     <!-- History Timeline -->
-                    <ul class="timeline list-unstyled">
-                        
-                        <li class="year">2014</li>
-                        
-                        <!--History Item -->
-                        <li class="timeline-item">
-                            <h4>Lorem ipsum dolor consectetur adipisicing.</h4>
-                            <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                            <span> 16 OCT 2014</span>
-                        </li>
-                        <!-- End Item -->
-                        
-                        <!--History Item -->
-                        <li class="timeline-item">
-                            <h4>Lorem ipsum dolor consectetur adipisicing.</h4>
-                            <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                            <span> 18 OCT 2014</span>
-                        </li>
-                        <!-- End Item -->
-                        
-                        <!-- History Year -->
-                        <li class="year">2015</li>
-                        
-                        
-                        <!--History Item -->
-                        <li class="timeline-item">
-                            <h4>Lorem ipsum dolor consectetur adipisicing.</h4>
-                            <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                            <span> 10 OCT 2015</span>
-                        </li>
-                        <!-- End Item -->
-                        
-                        <!--History Item -->
-                        <li class="timeline-item">
-                            <h4>Lorem ipsum dolor consectetur adipisicing.</h4>
-                            <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                            <span> 11 OCT 2014</span>
-                        </li>
-                        <!-- End Item -->
-                        
-                         <!--History Item -->
-                        <li class="timeline-item">
-                            <h4>Lorem ipsum dolor consectetur adipisicing.</h4>
-                            <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                            <span> 18 OCT 2015</span>
-                        </li>
-                        <!-- End Item -->
-                        
-                         <li class="clear"></li>
-                        
-                        <li class="end-icon fa fa-bookmark"></li>
-                    </ul>
-                   <!-- End History Timeline -->
-                   
-           </div> <!--/.container-->
-	</section>
-   <!--End History-->
-   
 
    <!--Start portfolio-->
-   <section id="works" class="section">
+   <section id="produit" class="section">
 				<!-- Filtering -->
                   <div class="title-box text-center">
-                    <h2 class="title">Our Work</h2>
+                    <h2 class="title">Nos Produits</h2>
                  </div>
 
 
@@ -699,20 +739,18 @@ viverra purus tristique.</p>
 						<!-- Filtering -->
 						<ul class="filtering">
 							<li class="filter" data-filter="all">All</li>
-							<li class="filter" data-filter="fashion">Fashion</li>
-							<li class="filter" data-filter="event">Events</li>
-							<li class="filter" data-filter="wedding">Wedding</li>
-							<li class="filter" data-filter="corporate">Corporate</li>
+							<li class="filter" data-filter="shaft alignment">shaft alignment</li>
+							<li class="filter" data-filter="CONDITION MONITORING">CONDITION MONITORING</li>
 						</ul>
 					</div>
                 
 				<div class="work-main">
 					<!-- Work Grid -->
 					<ul class="work-grid">
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix corporate">
+						<!-- Produit Item -->
+						<li class="work-item thumnail-img mix shaft alignment">
 							<div class="work-image">
-                                <img src="images/works/img1.jpg" alt="thumbnail">
+                                <img src="{% static 'images/produit/LeNXAPro.jpg' %}" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
@@ -720,7 +758,7 @@ viverra purus tristique.</p>
                                         <i class="fa fa-link"></i>
                                     </a>
         
-                                    <a href="images/works/img1.jpg" class="popup-image">
+                                    <a href="{% static 'images/produit/LeNXAPro.jpg' %}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                  </div>
@@ -728,8 +766,8 @@ viverra purus tristique.</p>
 
                                  <!--Hover Caption-->
                                  <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
+                                     <h4>NXA PRO</h4>
+                                     <p>Alignement rapide et efficace de la chaine cinématique</p>
                                  </div>
                                  <!--End Caption-->
 
@@ -738,9 +776,9 @@ viverra purus tristique.</p>
 						<!--End Work Item -->
                         
 						<!-- Work Item -->
-						<li class="work-item thumnail-img mix fashion wedding">
+						<li class="work-item thumnail-img mix CONDITION MONITORING">
 							<div class="work-image">
-                                <img src="images/works/img2.jpg" alt="thumbnail">
+                                <img src="{% static 'images/produit/oneProdFALCON.jpg' %}" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
@@ -748,7 +786,7 @@ viverra purus tristique.</p>
                                         <i class="fa fa-link"></i>
                                     </a>
         
-                                    <a href="images/works/img2.jpg" class="popup-image">
+                                    <a href="{% static 'images/produit/oneProdFALCON.jpg' %}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                  </div>
@@ -756,19 +794,47 @@ viverra purus tristique.</p>
 
                                  <!--Hover Caption-->
                                  <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
+                                     <h4>FALCON</h4>
+                                     <p>Collecteur et analyseur de vibration portatif</p>
                                  </div>
                                  <!--End Caption-->
 
                             </div> <!-- /.work-image-->
 						</li> 
 						<!--End Work Item -->
+
+                        <!-- Work Item -->
+						<li class="work-item thumnail-img mix CONDITION MONITORING">
+							<div class="work-image">
+                                <img src="{% static 'images/produit/MVX_MV-120.jpg' %}" alt="thumbnail">
+
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="single-work.html">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+
+                                    <a href="{% static 'images/produit/MVX_MV-120.jpg' %}" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Mvx</h4>
+                                     <p>Analyseur intelligent de surveillance de plusieurs types de données</p>
+                                 </div>
+                                 <!--End Caption-->
+
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
                         
 						<!-- Work Item -->
-						<li class="work-item thumnail-img mix corporate">
+						<li class="work-item thumnail-img mix">
 							<div class="work-image">
-                                <img src="images/works/img3.jpg" alt="thumbnail">
+                                <img src="{% static 'images/produit/BEARINGDEFENDER.jpg' %}" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
@@ -776,7 +842,7 @@ viverra purus tristique.</p>
                                         <i class="fa fa-link"></i>
                                     </a>
         
-                                    <a href="images/works/img3.jpg" class="popup-image">
+                                    <a href="{% static 'images/produit/BEARINGDEFENDER.jpg' %}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                  </div>
@@ -784,8 +850,8 @@ viverra purus tristique.</p>
 
                                  <!--Hover Caption-->
                                  <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
+                                     <h4>Bearing Defender</h4>
+                                     <p>Une grande efficacité en détection de défaut de roulement</p>
                                  </div>
                                  <!--End Caption-->
 
@@ -794,9 +860,9 @@ viverra purus tristique.</p>
 						<!--End Work Item -->
 
 						<!-- Work Item -->
-						<li class="work-item thumnail-img mix corporate">
+						<li class="work-item thumnail-img mix CONDITION MONITORING">
 							<div class="work-image">
-                                <img src="images/works/img4.jpg" alt="thumbnail">
+                                <img src="{% static 'images/produit/EAGLE.jpg' %}" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
@@ -804,7 +870,7 @@ viverra purus tristique.</p>
                                         <i class="fa fa-link"></i>
                                     </a>
         
-                                    <a href="images/works/img4.jpg" class="popup-image">
+                                    <a href="{% static 'images/produit/EAGLE.jpg' %}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                  </div>
@@ -812,64 +878,8 @@ viverra purus tristique.</p>
 
                                  <!--Hover Caption-->
                                  <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
-                                 </div>
-                                 <!--End Caption-->
-
-                            </div> <!-- /.work-image-->
-						</li> 
-						<!--End Work Item -->
-                        
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix fashion wedding">
-							<div class="work-image">
-                                <img src="images/works/img5.jpg" alt="thumbnail">
-                                
-                                 <!--Hover link-->
-                                 <div class="hover-link">
-                                    <a href="single-work.html">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-        
-                                    <a href="images/works/img5.jpg" class="popup-image">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                 </div>
-                                 <!--End link-->
-
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
-                                 </div>
-                                 <!--End Caption-->
-
-                            </div> <!-- /.work-image-->
-						</li> 
-						<!--End Work Item -->
-						
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix event wedding">
-							<div class="work-image">
-                                <img src="images/works/img6.jpg" alt="thumbnail">
-                                
-                                 <!--Hover link-->
-                                 <div class="hover-link">
-                                    <a href="single-work.html">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-        
-                                    <a href="images/works/img6.jpg" class="popup-image">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                 </div>
-                                 <!--End link-->
-
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
+                                     <h4>Eagle</h4>
+                                     <p>Système de capteur ,sans fil, performant pour la surveillance des équipements inaccessible</p>
                                  </div>
                                  <!--End Caption-->
 
@@ -878,9 +888,9 @@ viverra purus tristique.</p>
 						<!--End Work Item -->
 
 						<!-- Work Item -->
-						<li class="work-item thumnail-img mix event">
+						<li class="work-item thumnail-img mix">
 							<div class="work-image">
-                                <img src="images/works/img7.jpg" alt="thumbnail">
+                                <img src="{% static 'images/produit/NESTI40.jpg' %}" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
@@ -888,7 +898,7 @@ viverra purus tristique.</p>
                                         <i class="fa fa-link"></i>
                                     </a>
         
-                                    <a href="images/works/img7.jpg" class="popup-image">
+                                    <a href="{% static 'images/produit/NESTI40.jpg' %}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                  </div>
@@ -896,8 +906,8 @@ viverra purus tristique.</p>
 
                                  <!--Hover Caption-->
                                  <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
+                                     <h4>NEST4.0</h4>
+                                     <p>intégration de vos parc machine et vos données de surveillance d’état par le logiciel NESTI4,0</p>
                                  </div>
                                  <!--End Caption-->
 
@@ -906,9 +916,9 @@ viverra purus tristique.</p>
 						<!--End Work Item -->
 
 						<!-- Work Item -->
-						<li class="work-item thumnail-img mix corporate">
+						<li class="work-item thumnail-img mix">
 							<div class="work-image">
-                                <img src="images/works/img8.jpg" alt="thumbnail">
+                                <img src="{% static 'images/produit/RT-300.jpg' %}" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
@@ -916,7 +926,7 @@ viverra purus tristique.</p>
                                         <i class="fa fa-link"></i>
                                     </a>
         
-                                    <a href="images/works/img8.jpg" class="popup-image">
+                                    <a href="{% static 'images/produit/RT-300.jpg' %}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                  </div>
@@ -924,120 +934,8 @@ viverra purus tristique.</p>
 
                                  <!--Hover Caption-->
                                  <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
-                                 </div>
-                                 <!--End Caption-->
-
-                            </div> <!-- /.work-image-->
-						</li> 
-						<!--End Work Item -->
-
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix event">
-							<div class="work-image">
-                                <img src="images/works/img9.jpg" alt="thumbnail">
-                                
-                                 <!--Hover link-->
-                                 <div class="hover-link">
-                                    <a href="single-work.html">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-        
-                                    <a href="images/works/img9.jpg" class="popup-image">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                 </div>
-                                 <!--End link-->
-
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
-                                 </div>
-                                 <!--End Caption-->
-
-                            </div> <!-- /.work-image-->
-						</li> 
-						<!--End Work Item -->
-
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix wedding">
-							<div class="work-image">
-                                <img src="images/works/img10.jpg" alt="thumbnail">
-                                
-                                 <!--Hover link-->
-                                 <div class="hover-link">
-                                    <a href="single-work.html">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-        
-                                    <a href="images/works/img10.jpg" class="popup-image">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                 </div>
-                                 <!--End link-->
-
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
-                                 </div>
-                                 <!--End Caption-->
-
-                            </div> <!-- /.work-image-->
-						</li> 
-						<!--End Work Item -->
-
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix fashion">
-							<div class="work-image">
-                                <img src="images/works/img11.jpg" alt="thumbnail">
-                                
-                                 <!--Hover link-->
-                                 <div class="hover-link">
-                                    <a href="single-work.html">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-        
-                                    <a href="images/works/img11.jpg" class="popup-image">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                 </div>
-                                 <!--End link-->
-
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
-                                 </div>
-                                 <!--End Caption-->
-
-                            </div> <!-- /.work-image-->
-						</li> 
-						<!--End Work Item -->
-
-						<!-- Work Item -->
-						<li class="work-item thumnail-img mix corporate">
-							<div class="work-image">
-                                <img src="images/works/img12.jpg" alt="thumbnail">
-                                
-                                 <!--Hover link-->
-                                 <div class="hover-link">
-                                    <a href="single-work.html">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-        
-                                    <a href="images/works/img12.jpg" class="popup-image">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                 </div>
-                                 <!--End link-->
-
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>Project Title</h4>
-                                     <p>Photography</p>
+                                     <h4>RT300</h4>
+                                     <p>Solution cloud-Surveillance d’état</p>
                                  </div>
                                  <!--End Caption-->
 
@@ -1056,8 +954,8 @@ viverra purus tristique.</p>
        <div class="overlay"></div>
          <div class="container">
              <div class="row text-center">
-                 <h2>Are you ready to buy this theme</h2>
-                 <a href="#" class="btn btn-green">GET A FREE QUOTE</a>
+                 <h2>Are you ready to buy a product</h2>
+                 <a href="#" class="btn btn-green">YES</a>
            </div>
          </div>
    </section>
@@ -1065,124 +963,95 @@ viverra purus tristique.</p>
    
    
     
-  <!--Start Team-->
+  <!--Start Prestations-->
   <section id="team" class="section">
 		<div class="container">
             <div class="row">
                     
              <div class="title-box text-center">
-                <h2 class="title">Team</h2>
+                <h2 class="title">Presatations</h2>
              </div>
               
              </div>
 			
                 <!-- Team -->
 				<div class="team-items team-carousel">
-                      <!-- Team Member #1 -->
+                      <!-- Prestation Member #1 -->
                       <div class="item">
-                          <img src="images/team/team1.jpg" alt=""  />
-                          <h4>Jonh Doe</h4>
-                          <h5>Photogropher</h5>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. </p>
-                          
-                          <div class="socials">
-                              <ul>
-                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
+                          <h4>Expertise vibratoire</h4>
+                          <p>Expertise vibratoire est une opération qui vise à identifier les origines des
+                            vibrations sur des machines tournantes , par des prélèvements des mesures
+                            vibratoire périodique,
+                            Nos experts rejoignent et accompagne votre équipe dans la résolution des
+                            problématiques de vibration de vos équipements</p>
                       </div>
                       <!-- End Member -->
                       
-                      <!-- Team Member #2 -->
+                      <!-- Prestation Member #2 -->
                       <div class="item">
-                          <img src="images/team/team2.jpg" alt=""  />
-                          <h4>Jonh Doe</h4>
-                          <h5>Web Designer</h5>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. </p>
-                          
-                          <div class="socials">
-                              <ul>
-                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
+                          <h4>Analyse de structure</h4>
+                          <p></p>
                       </div>
                       <!-- End Member -->
                       
-                      <!-- Team Member #3 -->
+                      <!-- Prestation Member #3 -->
                       <div class="item">
-                          <img src="images/team/team3.jpg" alt=""  />
-                          <h4>Jonh Doe</h4>
-                          <h5>Graphic Designer</h5>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. </p>
-                          
-                          <div class="socials">
-                              <ul>
-                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
+                          <h4>Equilibrage des machines</h4>
+                          <p>L'équilibrage
+                            de votre machine tournante donne obligatoirement
+                            lieu à la délivrance d’un rapport complet et détaillé de l'expertise
+                            effectuée par un de nos experts.
+                            La procédure d’équilibrage consiste à réaliser des essais
+                            d’influence de masses sur des plans d’équilibrage que nous
+                            définissons (flasque d’une roue et ailettes de ventilateurs,
+                            accouplements, trous ou pistes d’équilibrage , …) afin de
+                            déterminer la quantité et la localisation des masses de correction
+                            à l’aide de nos logiciels de calculs.</p>
                       </div>
                       <!-- End Member -->
                       
-                       <!-- Team Member #4 -->
+                       <!-- Prestation Member #4 -->
                       <div class="item">
-                          <img src="images/team/team4.jpg" alt=""  />
-                          <h4>Jonh Doe</h4>
-                          <h5>Photogropher</h5>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. </p>
-                          
-                          <div class="socials">
-                              <ul>
-                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
+                          <h4>Alignement laser</h4>
+                          <p>les machines tournantes sont sensibles aux défauts
+                            d’alignement. Les machines correctement alignées et
+                            régulièrement contrôlées permettent de faire une économie
+                            considérable sur les coûts d’exploitation et de maintenance.
+                            A plusieurs égards, l’alignement précis des arbres permet de
+                            grosses économies sur les coûts :</p>
+                          <p>•Réduction de la consommation de courant</p>
+                          <p>•Les paliers s’usent moins</p>
+                          <p>•Etanchéités, arbres et accouplements</p>
+                          <p>•Pas de températures élevées sur le palier et l’accouplement</p>
+                          <p>•Réduction des vibrations sur les arbres et les vis de fondations</p>
+                          <p>•Altérations fortement réduite des arbres et vis de fondations.</p>
+
                       </div>
                       <!-- End Member -->
                       
-                       <!-- Team Member #5 -->
+                       <!-- Prestation Member #5 -->
                       <div class="item">
-                          <img src="images/team/team1.jpg" alt=""  />
-                          <h4>Jonh Doe</h4>
-                          <h5>Graphic Designer</h5>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. </p>
-                          
-                          <div class="socials">
-                              <ul>
-                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
+                          <h4>Diagnostic acoustique</h4>
+                          <p></p>
                       </div>
                       <!-- End Member -->
                       
-                       <!-- Team Member #6 -->
+                       <!-- Prestation Member #6 -->
                       <div class="item">
-                          <img src="images/team/team2.jpg" alt=""  />
-                          <h4>Jonh Doe</h4>
-                          <h5>Web Designer</h5>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. </p>
-                          
-                          <div class="socials">
-                              <ul>
-                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
+                          <h4>Cartographie de bruit</h4>
+                          <p></p>
+                      </div>
+                      <!-- End Member -->
+                     <!-- Prestation Member #7 -->
+                      <div class="item">
+                          <h4>Tribologie</h4>
+                          <p></p>
+                      </div>
+                      <!-- End Member -->
+                    <!-- Prestation Member #8 -->
+                      <div class="item">
+                          <h4>Analyse par ultrason</h4>
+                          <p></p>
                       </div>
                       <!-- End Member -->
 				</div>
@@ -1194,390 +1063,178 @@ viverra purus tristique.</p>
 
 
     <!--Start Skills-->
-  <section  id="skills" class="section parallax">
-       <div class="overlay"></div>
-       <div class="container">
-           <div class="row">
-                    
-             <div class="title-box text-center white">
-                <h2 class="title">Technical Skills</h2>
-             </div>
-              
-                 <!--Skill #1-->
-                <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
-                    <span class="pie-chart " data-percent="87">
-                        <span class="percent"></span>
-                    </span>
-                    <h4>Photoshop</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                
-                <!--Skill #2-->
-                <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
-                    <span class="pie-chart" data-percent="75">
-                        <span class="percent"></span>
-                    </span>
-                    <h4>Wordpress</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                
-                <!--Skill #3-->
-                <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
-                    <span class="pie-chart " data-percent="60">
-                        <span class="percent"></span>
-                    </span>
-                    <h4>Graphic</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                
-                <!--Skill #4-->
-                <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
-                    <span class="pie-chart" data-percent="95">
-                        <span class="percent"></span>
-                    </span>
-                    <h4>Development</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
 
-            
-           </div> <!-- /.row-->
-       </div> <!-- /.container-->
-  </section> 
-  <!--End Skills-->
-
- 
-  <!--Start Services-->
+    <!--Start Formation-->
    <section id="services" class="section">
         <div class="container">
             <div class="row">
             
                  <div class="title-box text-center">
-                    <h2 class="title">Services</h2>
+                    <h2 class="title">Formation</h2>
                  </div>
               
-               <!--Services Item-->
+               <!--Formation Item-->
                <div class="col-md-4">
                    <div class="services-box">
-                       <div class="services-icon"> <i class="icon-basket"></i> </div> 
-                       <div class="services-desc">
-                          <h4>Development</h4>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing. </p>
-                       </div>
+                          <h4>Programme de formation inter</h4>
                    </div>
                </div>
-                <!--End services Item-->
+                <!--End Formation Item-->
                 
-                <!--Services Item-->
+                <!--Formation Item-->
                <div class="col-md-4">
                    <div class="services-box">
-                       <div class="services-icon"> <i class="icon-shield"></i> </div> 
-                       <div class="services-desc">
-                          <h4>Web Design</h4>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing. </p>
-                       </div>
+                          <h4>Programme de formation intra</h4>
                    </div>
                </div>
-               <!--End services Item-->
-               
-               <!--Services Item-->
+                <!--End Formation Item-->
+
+               <!--Formation Item-->
                <div class="col-md-4">
                    <div class="services-box">
-                       <div class="services-icon"> <i class="icon-hotairballoon"></i> </div> 
-                       <div class="services-desc">
-                          <h4>SEO</h4>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing. </p>
-                       </div>
+                          <h4>Technologies One proD</h4>
                    </div>
                </div>
-                <!--End services Item-->
+                <!--End Formation Item-->
                 
-               <!--Services Item -->
+               <!--Formation Item-->
                <div class="col-md-4">
                    <div class="services-box">
-                       <div class="services-icon"> <i class="icon-global"></i> </div> 
-                       <div class="services-desc">
-                          <h4>Graphic Design</h4>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing. </p>
-                       </div>
+                          <h4>Diagnostic vibratoire niv I</h4>
                    </div>
                </div>
-               <!--End services Item-->
+                <!--End Formation Item-->
                
-               <!--Services Item-->
+               <!--Formation Item-->
                <div class="col-md-4">
                    <div class="services-box">
-                       <div class="services-icon"> <i class="icon-target"></i> </div> 
-                       <div class="services-desc">
-                          <h4>Content Writing</h4>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing. </p>
-                       </div>
+                          <h4>Diagnostic vibratoire niv II</h4>
                    </div>
                </div>
-              <!--End services Item-->
+                <!--End Formation Item-->
               
-               <!--Services Item -->
+               <!--Formation Item-->
                <div class="col-md-4">
                    <div class="services-box">
-                       <div class="services-icon"> <i class="icon-aperture"></i> </div> 
-                       <div class="services-desc">
-                          <h4>HTML Basic</h4>
-                          <p>Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing. </p>
-                       </div>
+                          <h4>Diagnostic vibratoire niv III</h4>
                    </div>
                </div>
-               <!--End services Item-->
-              
+                <!--End Formation Item-->
+               <!--Formation Item-->
+               <div class="col-md-4">
+                   <div class="services-box">
+                          <h4>Analyse de structure</h4>
+                   </div>
+               </div>
+                <!--End Formation Item-->
+               <!--Formation Item-->
+               <div class="col-md-4">
+                   <div class="services-box">
+                          <h4>Certification MOBIUS</h4>
+                   </div>
+               </div>
+                <!--End Formation Item-->
+               <!--Formation Item-->
+               <div class="col-md-4">
+                   <div class="services-box">
+                          <h4>Management de la maintenance</h4>
+                   </div>
+               </div>
+                <!--End Formation Item-->
+               <!--Formation Item-->
+               <div class="col-md-4">
+                   <div class="services-box">
+                       <h4>Lean maintenance</h4>
+                   </div>
+               </div>
+                <!--End Formation Item-->
             </div> <!--/.row-->
         </div> <!--/.container-->
    </section> 
-  <!--End Services-->
+  <!--End Formation-->
 
- 
-     <!--Start Why Choose us-->
-  <section id="why-choose" class="section">
+   <!-- Start consulting-->
+   <section id="consulting" class="section">
        <div class="container">
            <div class="row">
            
                  <div class="title-box text-center">
-                    <h2 class="title">Why Choose us</h2>
-                 </div>
-              
-              <!--start tabs-->
-              <div class="col-md-6">
-                  <div class="tabs tabs-main">
-					<ul class="nav nav-tabs">
-					  <li class="active"><a href="#one" data-toggle="tab">Design</a></li>
-					  <li><a href="#two" data-toggle="tab">Company</a></li>
-					  <li><a href="#three" data-toggle="tab">Support</a></li>
-					</ul>
-					<div class="tab-content">
-
-						<!--Start Tab Item #1 -->
-						<div class="tab-pane in active" id="one">
-							<p>
-								Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. 
-							</p>
-						</div>
-						<!-- End Tab -->
-
-						<!--Start Tab Item #2 -->
-						<div class="tab-pane" id="two">
-							<p>
-								Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
-							</p>
-						</div>
-						<!-- End Tab -->
-
-						<!--Start Tab Item #3 -->
-						<div class="tab-pane" id="three">
-							<p>
-								Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
-							</p>
-						</div>
-						<!-- End Tab -->
-
-					</div>
-				</div>
-              </div>
-             <!-- End Tabs-->
-            
-            <!--Start Accordion-->
-            <div class="col-md-6">
-               <div class="panel-group accordion-main" id="accordion">
-                       <!--About accordion #1-->
-				       <div class="panel">
-                           <div class="panel-heading collapsed" data-toggle="collapse"
-                            data-parent="#accordion" data-target="#collapseOne">
-                          <h6 class="panel-title accordion-toggle">
-                              Photography
-                          </h6>
-                        </div>
-					<div id="collapseOne" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
-                            </p>
-                                
-                        </div>
-					</div>
-				  </div>
-                  
-                  <!--About accordion #2-->
-				  <div class="panel">
-                       <div class="panel-heading collapsed" data-toggle="collapse"
-                        data-parent="#accordion" data-target="#collapseTwo">
-                      <h6 class="panel-title accordion-toggle">
-                          Web Designing
-                      </h6>
-                       </div>
-					<div id="collapseTwo" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
-                            </p>
-                        </div>
-					</div>
-				  </div>
-
-                 <!--About accordion #3-->
-				  <div class="panel">
-                      <div class="panel-heading collapsed" data-toggle="collapse"
-                            data-parent="#accordion" data-target="#collapseThree">
-                          <h6 class="panel-title accordion-toggle">
-                              Web Development
-                          </h6>
-                        </div>
-					<div id="collapseThree" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
-                            </p>
-                                
-                        </div>
-					</div>
-				  </div>
-
-                <!--About accordion #4-->
-				 <div class="panel">
-                     <div class="panel-heading collapsed" data-toggle="collapse"
-                            data-parent="#accordion" data-target="#collapseFour">
-                          <h6 class="panel-title accordion-toggle">
-                              Responsive Design
-                          </h6>
-                        </div>
-					<div id="collapseFour" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
-                            </p>
-                        </div>
-					</div>
-				  </div>
-				</div>
-            </div>
-            <!--End Accordion-->
-              
-           </div> <!--/.row-->
-       </div> <!--/.container-->
-  </section>
-  <!--End Why Choose us-->
-
- 
-    <!--Start video-->
-  <section id="video" class="section parallax">
-        <div class="overlay"></div>
-       <div class="container">
-           <div class="row">
-           
-                 <div class="title-box text-center white">
-                    <h2 class="title">Video</h2>
-                 </div>
-             
-             <div class="col-md-6">
-                 <div class="video-caption-main">
-                      <!--Video caption #1-->
-                      <div class="video-caption">
-                          <div class="video-icon">
-                              <i class="fa fa-briefcase"></i>
-                          </div>
-                          <div class="video-caption-info">
-                              <h4>Take a look at  this video to see how we work.</h4>
-                              <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                          </div>
-                      </div>
-                      
-                       <!--Video caption #2-->
-                      <div class="video-caption">
-                          <div class="video-icon">
-                              <i class="fa fa-glass"></i>
-                          </div>
-                          <div class="video-caption-info">
-                              <h4>The programming language of ios apps</h4>
-                              <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                          </div>
-                      </div>
-
-                      <!--Video caption #3-->
-                      <div class="video-caption">
-                          <div class="video-icon">
-                              <i class="fa fa-rocket "></i>
-                          </div>
-                          <div class="video-caption-info">
-                              <h4>Take a look at  this video to see how we work.</h4>
-                              <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                          </div>
-                      </div>
-                      
-                 </div>
-             </div>
-            <!-- End Video caption-->
-             
-            <div class="col-md-6">
-                <div class="play-video">
-                  <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
-                </div>
-            </div> 
-               
-           </div> <!-- /.row-->
-       </div> <!-- /.container-->
-  </section>
-  <!--End video-->
-
-
-   <!-- Start blog-->
-   <section id="blog" class="section">
-       <div class="container">
-           <div class="row">
-           
-                 <div class="title-box text-center">
-                    <h2 class="title">Latest Blog</h2>
+                    <h2 class="title">Consulting</h2>
                  </div>
                 
-               <!-- Start Blog item #1-->
+               <!-- Start Consulting item #1-->
                <div class="col-md-4">
-                   <div class="blog-post">
-                         <div class="post-media">
-							 <img src="images/blog/blog1.jpg" alt="">
-                         </div>
+                   <div class="consulting-post">
                        <div class="post-desc">
-                           <h4>consectetur adipisicing Inventore</h4>
-                           <h5>12 May, 2015 / 5 Comments</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde</p>
-                            <a href="blog.html" class="btn btn-gray-border">Read More</a>
+                           <h4>Audit de la maintenance</h4>
+                           <p><strong>audit de la maintenance industrielle</strong> est la première
+                            étape, nécessaire, d'un projet d'amélioration,
+                            d'optimisation des pratiques en place sur un site de
+                            production en vue d'optimiser les performances
+                            Pour en maîtriser les conséquences et les risques
+                            associés, apporter des améliorations doit se faire de
+                            façon structurée et méthodique
+                            Capitaliser
+                            sur les points forts existants et bien ancrés
+                            nécessite <strong>expertise</strong> et <strong>savoir faire</strong> de la part des acteurs
+                            de changement qui interviennent</p>
                        </div>
                    </div>
                </div>
                
-               <!-- Start Blog item #2-->
+               <!-- Start Consulting item #2-->
                <div class="col-md-4">
-                   <div class="blog-post">
-                         <div class="post-media">
-							 <img src="images/blog/blog2.jpg" alt="">
-                         </div>
+                   <div class="consulting-post">
                        <div class="post-desc">
-                           <h4>consectetur adipisicing Inventore</h4>
-                            <h5>12 May, 2015 / 3 Comments</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde</p>
-                            <a href="blog.html" class="btn btn-gray-border">Read More</a>
+                           <h4>Audit Lean et performance</h4>
+                            <p></p>
                        </div>
                    </div>
                </div>
                
-               <!-- Start Blog item #3-->
+               <!-- Start Consulting item #3-->
                <div class="col-md-4">
-                   <div class="blog-post">
-                         <div class="post-media">
-							 <img src="images/blog/blog3.jpg" alt="">
-                         </div>
+                   <div class="consulting-post">
                        <div class="post-desc">
-                           <h4>consectetur adipisicing Inventore</h4>
-                             <h5>12 May, 2015 / 11 Comments</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde</p>
-                        <a href="blog.html" class="btn btn-gray-border">Read More</a>
+                           <h4>Accompagnement Lean</h4>
+                            <p></p>
                        </div>
                    </div>
                </div>
 
+               <!-- Start Consulting item #4-->
+               <div class="col-md-4">
+                   <div class="consulting-post">
+                       <div class="post-desc">
+                           <h4>Accompagnement Maintenance</h4>
+                            <p></p>
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Start Consulting item #5-->
+               <div class="col-md-4">
+                   <div class="consulting-post">
+                       <div class="post-desc">
+                           <h4>Développement des compétences</h4>
+                            <p></p>
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Start Consulting item #6-->
+               <div class="col-md-4">
+                   <div class="consulting-post">
+                       <div class="post-desc">
+                           <h4>Organisation Bureaux Méthodes</h4>
+                            <p></p>
+                       </div>
+                   </div>
+               </div>
            </div> <!--/.row-->
        </div> <!--/.container-->
    </section>
-   <!-- End blog-->
+   <!-- End consulting-->
    
  
   <!--Start Testimonial-->  
@@ -1596,21 +1253,21 @@ viverra purus tristique.</p>
                             <!--Start Testimonial item #1-->
                             <div class="items">
                                 <div class="desc">habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet habitant morbi tristique senectus et netus et malesuada fames ac quam egestas.</div>
-                                <img src="images/testimonial/testimonial-img1.jpg" class="testimonial-pic" alt="testimonials" />
+                                <img src="{% static 'images/testimonial/testimonial-img1.jpg' %}" class="testimonial-pic" alt="testimonials" />
                                 <div class="name">Andrew Doe</div>
                             </div>
                             
                               <!--Start Testimonial item #2-->
                             <div class="items">
                                 <div class="desc">habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet habitant morbi tristique senectus et netus et malesuada fames ac quam egestas.</div>
-                                <img src="images/testimonial/testimonial-img2.jpg" class="testimonial-pic" alt="testimonials" />
+                                <img src="{% static 'images/testimonial/testimonial-img2.jpg' %}" class="testimonial-pic" alt="testimonials" />
                                 <div class="name">Andrew Doe</div>
                             </div>
                             
                               <!--Start Testimonial item #3-->
                             <div class="items">
                                 <div class="desc">habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet habitant morbi tristique senectus et netus et malesuada fames ac quam egestas.</div>
-                                <img src="images/testimonial/testimonial-img1.jpg" class="testimonial-pic" alt="testimonials" />
+                                <img src="{% static '/testimonial/testimonial-img1.jpg' %}" class="testimonial-pic" alt="testimonials" />
                                 <div class="name">Andrew Doe</div>
                             </div>
                         </div>
@@ -1621,13 +1278,13 @@ viverra purus tristique.</p>
         <!--Start Testimonial-->
   
  
-    <!--Start clients-->
+    <!--Start Références-->
     <section id="clients" class="section">
            <div class="container">
                <div class="row">
                
             <div class="title-box text-center">
-                <h2 class="title">Our Clients</h2>
+                <h2 class="title">Réferences</h2>
              </div>
                 
                    <div class="clients-carousel">
@@ -1636,78 +1293,231 @@ viverra purus tristique.</p>
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                    <img src="images/clients-logo/client1.png" alt="" />
+                                    <img src="{% static 'images/ref/sonasid.jpg' %}" alt="" />
                                 </figure>
                             </a>
                         </div>
-                        
                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                      <img src="images/clients-logo/client2.png" alt="" />
+                                    <img src="{% static 'images/ref/managem.jpg' %}" alt="" />
                                 </figure>
                             </a>
                         </div>
-                        
-                        <!-- Clients Logo Item-->
-                        <div class="item">
-                            <a href="#">
-                                <figure>
-                                      <img src="images/clients-logo/client3.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        
-                        <!-- Clients Logo Item-->
-                        <div class="item">
-                            <a href="#">
-                                <figure>
-                                     <img src="images/clients-logo/client4.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        
                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                      <img src="images/clients-logo/client2.png" alt="" />
+                                    <img src="{% static 'images/ref/lafarge.jpg' %}" alt="" />
                                 </figure>
                             </a>
                         </div>
-                        
                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                      <img src="images/clients-logo/client5.png" alt="" />
+                                    <img src="{% static 'images/ref/holcim.jpg' %}" alt="" />
                                 </figure>
                             </a>
                         </div>
-                        
-                        <!-- Clients Logo Item-->
+                       <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                     <img src="images/clients-logo/client4.png" alt="" />
+                                    <img src="{% static 'images/ref/ciments.jpg' %}" alt="" />
                                 </figure>
                             </a>
                         </div>
-                        
-                        <!-- Clients Logo Item-->
+                       <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                     <img src="images/clients-logo/client1.png" alt="" />
+                                    <img src="{% static 'images/ref/cimat.jpg' %}" alt="" />
                                 </figure>
                             </a>
                         </div>
-		         </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/temara.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/simens.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/mcp.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/unilever.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/total.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/alstom.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/lpee.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/cimaf.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/ca2e.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/rob.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/cegelec.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/jeesr.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/salam.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/gpc.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/apm.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/sothema.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/tbn.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/coficad.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/lesieur.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/danone.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/centrale.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href="#">
+                                <figure>
+                                    <img src="{% static 'images/ref/ocp.jpg' %}" alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                   </div>
                </div> <!--/.row-->
          </div> <!--/.container-->
     </section>
-   <!--End clients-->
+   <!--End Réferences-->
    
    
    <!--Start Contact-->
@@ -1788,17 +1598,19 @@ viverra purus tristique.</p>
    <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
 
     <!--Plugins-->
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
-    <script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/jquery.easypiechart.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+
     
  </body>
 </html>
