@@ -11,7 +11,7 @@ from .models import *
 from django.views import generic
 
 
-class HomeView(generic.ListView):
+class HomeView(TemplateView):
     template_name = 'index.html'
     context_object_name = 'produits'
 
