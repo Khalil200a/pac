@@ -31,6 +31,7 @@ class Produit(models.Model):
     image = models.ImageField(upload_to='users/', null=True, blank=True)
     height = models.CharField(max_length=200, blank=True)
     width = models.CharField(max_length=200, blank=True)
+    filter = models.CharField(max_length=200, blank=True)
 
 
     def __str__(self):

@@ -162,34 +162,48 @@
                                   <div class="sub-menu-nav">
                                     <button onclick="location.href='#produit'" class="nav-btn">Produit</button>
                                     <div class="sub-menu-alt">
-                                      <a href="#">NXA PRO</a>
-                                      <a href="#">EAGLE</a>
-                                      <a href="#">FALCON</a>
-                                      <a href="#">MVX</a>
-                                      <a href="#">RT300</a>
-                                      <a href="#">NEST4.0</a>
-                                      <a href="#">BEARING DEFENDER</a>
+                                        {% for produit in produits %}
+                                            <a href="#">{{produit.titre}}</a>
+                                        {% endfor %}
                                     </div>
                                   </div>
                                   <div class="sub-menu-nav">
                                     <button onclick="location.href='#team'" class="nav-btn">Prestations</button>
                                     <div class="sub-menu-alt">
-                                      <a href="#">Partner 1</a>
-                                      <a href="#">Partner 2</a>
+                                        <a href="#">Expertise vibratoire</a>
+                                        <a href="#">Analyse de structure</a>
+                                        <a href="#">Equilibrage des machines</a>
+                                        <a href="#">Alignement laser</a>
+                                        <a href="#">Diagnostic acoustique</a>
+                                        <a href="#">Cartographie de bruit</a>
+                                        <a href="#">Tribologie</a>
+                                        <a href="#">Analyse par ultrason</a>
                                     </div>
                                   </div>
                                   <div class="sub-menu-nav">
                                     <button onclick="location.href='#services'" class="nav-btn">Formation</button>
                                     <div class="sub-menu-alt">
-                                      <a href="#">Partner 1</a>
-                                      <a href="#">Partner 2</a>
+                                        <a href="#">Programme de formation inter</a>
+                                        <a href="#">Programme de formation intra</a>
+                                        <a href="#">Technologies One proD</a>
+                                        <a href="#">Diagnostic vibratoire niv I</a>
+                                        <a href="#">Diagnostic vibratoire niv II</a>
+                                        <a href="#">Diagnostic vibratoire niv III</a>
+                                        <a href="#">Analyse de structure</a>
+                                        <a href="#">Certification MOBIUS</a>
+                                        <a href="#">Management de la maintenance</a>
+                                        <a href="#">Lean maintenance</a>
                                     </div>
                                   </div>
                                   <div class="sub-menu-nav">
                                     <button onclick="location.href='#consulting'" class="nav-btn">Consulting</button>
                                     <div class="sub-menu-alt">
-                                      <a href="#">Partner 1</a>
-                                      <a href="#">Partner 2</a>
+                                        <a href="#">Audit de la maintenance</a>
+                                        <a href="#">Audit Lean et performance</a>
+                                        <a href="#">Accompagnement Lean</a>
+                                        <a href="#">Accompagnement Maintenance</a>
+                                        <a href="#">Développement des compétences</a>
+                                        <a href="#">Organisation Bureaux Méthodes</a>
                                     </div>
                                   </div>
                                   <div class="sub-menu-nav">
@@ -366,170 +380,41 @@
             </ul>
         </div>
         <div class="work-main">
-            <!-- Work Grid -->
+            <!-- Produit item Grid -->
             <ul class="work-grid">
-                <!-- Produit Item -->
-                <li class="work-item thumnail-img mix shaft alignment">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/LeNXAPro.jpg' %}" alt="thumbnail">
 
-                         <!--Hover link-->
-                         <div class="hover-link">
-                            <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/LeNXAPro.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>NXA PRO</h4>
-                             <p>Alignement rapide et efficace de la chaine cinématique</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
-                <!-- Work Item -->
-                <li class="work-item thumnail-img mix CONDITION MONITORING">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/oneProdFALCON.jpg' %}" alt="thumbnail">
-                         <!--Hover link-->
-                         <div class="hover-link">
-                            <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/oneProdFALCON.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>FALCON</h4>
-                             <p>Collecteur et analyseur de vibration portatif</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
-                <!-- Work Item -->
-                <li class="work-item thumnail-img mix CONDITION MONITORING">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/MVX_MV-120.jpg' %}" alt="thumbnail">
-                         <!--Hover link-->
-                         <div class="hover-link">
-                            <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/MVX_MV-120.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>Mvx</h4>
-                             <p>Analyseur intelligent de surveillance de plusieurs types de données</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
-                <!-- Work Item -->
-                <li class="work-item thumnail-img mix">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/BEARINGDEFENDER.jpg' %}" alt="thumbnail">
-                         <!--Hover link-->
-                         <div class="hover-link">
-                           <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/BEARINGDEFENDER.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>Bearing Defender</h4>
-                             <p>Une grande efficacité en détection de défaut de roulement</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
-                <!-- Work Item -->
-                <li class="work-item thumnail-img mix CONDITION MONITORING">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/EAGLE.jpg' %}" alt="thumbnail">
-                         <!--Hover link-->
-                         <div class="hover-link">
-                            <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/EAGLE.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>Eagle</h4>
-                             <p>Système de capteur ,sans fil, performant pour la surveillance des équipements inaccessible</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
-                <!-- Work Item -->
-                <li class="work-item thumnail-img mix">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/NESTI40.jpg' %}" alt="thumbnail">
-                         <!--Hover link-->
-                         <div class="hover-link">
-                            <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/NESTI40.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>NEST4.0</h4>
-                             <p>intégration de vos parc machine et vos données de surveillance d’état par le logiciel NESTI4,0</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
-                <!-- Work Item -->
-                <li class="work-item thumnail-img mix">
-                    <div class="work-image">
-                        <img src="{% static 'images/produit/RT-300.jpg' %}" alt="thumbnail">
-                         <!--Hover link-->
-                         <div class="hover-link">
-                            <a href="single-work.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a href="{% static 'images/produit/RT-300.jpg' %}" class="popup-image">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                         </div>
-                         <!--End link-->
-                         <!--Hover Caption-->
-                         <div class="work-caption">
-                             <h4>RT300</h4>
-                             <p>Solution cloud-Surveillance d’état</p>
-                         </div>
-                         <!--End Caption-->
-                    </div> <!-- /.work-image-->
-                </li>
-                <!--End Work Item -->
+                {% for produit in produits %}
+                    <!-- Produit Item -->
+                        {% if produit.filter == "shaft alignment" %}
+                            <li class="work-item thumnail-img mix shaft alignment">
+                        {% elif produit.filter == "CONDITION MONITORING" %}
+                            <li class="work-item thumnail-img mix CONDITION MONITORING">
+                        {% else %}
+                            <li class="work-item thumnail-img mix">
+                        {% endif %}
+                        <div class="work-image">
+                            <img src="{{produit.image.url}}" class="rounded float-right">
+
+                             <!--Hover link-->
+                             <div class="hover-link">
+                                <a href="single-work.html">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a href="{{produit.image.url}}" class="popup-image">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                             </div>
+                             <!--End link-->
+                             <!--Hover Caption-->
+                             <div class="work-caption">
+                                 <h4>{{produit.titre}}</h4>
+                                 <p>{{produit.small_desc | linebreaks}}</p>
+                             </div>
+                             <!--End Caption-->
+                        </div>
+                    </li>
+                     <!--End Produit Item -->
+                {% endfor %}
             </ul>
         </div>
    </section>
@@ -1079,9 +964,9 @@
                <div class="col-md-8 col-md-offset-2 contact-form">
                
                     <div class="contact-info text-center">
-                       <p>123 4567 890</p>
-                       <p>123 lorem ipsum, 4th floor, lorem, ipsum </p>
-                       <p>mail@demo.com </p>
+                       <p>06 61 30 59 68 / 022 27 51 66</p>
+                       <p>03 Rue Calavon Elkaram II Rez de Chaussée N : 03 Quartier des Hôpitaux 20340 Casablanca</p>
+                       <p>hassan.ayadi.pac@gmail.com</p>
                     </div>
                      
                      <form method="post">
@@ -1117,7 +1002,7 @@
            <div class="row">
                <!--Start copyright-->
                <div class="col-md-6 col-sm-6 col-xs-6">
-                   <div class="copyright"><p>Copyright © 2016 All Rights reserved by: <a href="http://templatestock.co">Template Stock</a>
+                   <div class="copyright"><p>Copyright © 2021 All Rights reserved by: <a href="https://www.linkedin.com/in/khalil-jemghili-18619b1ba/">Jemghili Khalil</a>
                  </p></div>
                </div>
                <!--End copyright-->

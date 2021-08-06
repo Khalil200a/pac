@@ -11,13 +11,10 @@ from .models import *
 from django.views import generic
 
 
-class HomeView(TemplateView):
+class HomeView(generic.ListView):
     template_name = 'index.html'
-
-class ProduitView(LoginRequiredMixin, generic.ListView):
-    template_name = 'common/produit.html'
-    login_url = reverse_lazy('home')
-    context_object_name = 'format'
+    context_object_name = 'produits'
 
     def get_queryset(self):
         return Produit.objects.all()
+
