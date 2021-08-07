@@ -154,13 +154,13 @@
 							<div class="clear-toggle"></div>
 							<div class="sub-menu">
                                   <div class="sub-menu-nav">
-                                    <button onclick="location.href='#home'" class="nav-btn">Home</button>
+                                    <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
                                   </div>
                                   <div class="sub-menu-nav">
                                     <button onclick="location.href='#about'" class="nav-btn">About</button>
                                   </div>
                                   <div class="sub-menu-nav">
-                                    <button onclick="location.href='#produit'" class="nav-btn">Produit</button>
+                                    <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
                                     <div class="sub-menu-alt">
                                         {% for produit in produits %}
                                             <a href="#">{{produit.titre}}</a>
@@ -274,12 +274,12 @@
                   <div class="features-icon-box">
                   
                       <div class="features-icon">
-                      <i class="fa fa-leaf"></i>
+                          <i class="fas fa-users"></i>
                       </div>
                       
                       <div class="features-info">
-                         <h4>Clean & Modern Design</h4>
-                         <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                         <h4>Qui sommes nous</h4>
+                         <p></p>
                       </div>
                   </div>
               </div>
@@ -289,12 +289,19 @@
                   <div class="features-icon-box">
                   
                       <div class="features-icon">
-                      <i class="fa fa-paper-plane"></i>
+                      <i class="fas fa-low-vision"></i>
                       </div>
                       
                       <div class="features-info">
-                         <h4>Illustration</h4>
-                         <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                         <h4>Mission et vision</h4>
+                         <p>La Mission de PAC est de contribuer à l’amélioration et l’optimisation des
+                            équipements industriels de nos clients, dans une volonté d’efficacité
+                            technique et financière : augmenter la disponibilité et la fiabilité de vos
+                            équipements, tout en assurant la sécurité de vos équipes et maitriser la
+                            disponibilité de vos outils de production est pour nous un but à atteindre
+                            Nous souhaitons que les investissements en infrastructures de nos clients
+                            soient durables et apportent un retour sur investissement satisfaisant pour
+                            l’ensemble des parties prenantes des projets</p>
                       </div>
                   </div>
               </div>
@@ -304,62 +311,15 @@
                   <div class="features-icon-box">
                   
                       <div class="features-icon">
-                     <i class="fa fa-life-saver"></i>
+                          <i class="fas fa-heart"></i>
                       </div>
                       
                       <div class="features-info">
-                         <h4>App Development</h4>
-                         <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                         <h4>Valeurs</h4>
+                         <p></p>
                       </div>
                   </div>
               </div>
- 
-               <!-- Features Icon-->
-              <div class="col-md-4">
-                  <div class="features-icon-box">
-                  
-                      <div class="features-icon">
-                      <i class="fa fa-paint-brush"></i>
-                      </div>
-                      
-                      <div class="features-info">
-                         <h4>Web Development</h4>
-                         <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Features Icon-->
-              <div class="col-md-4">
-                  <div class="features-icon-box">
-                  
-                      <div class="features-icon">
-                     <i class="fa fa-line-chart"></i>
-                      </div>
-                      
-                      <div class="features-info">
-                         <h4>Digital Design</h4>
-                         <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Features Icon-->
-              <div class="col-md-4">
-                  <div class="features-icon-box">
-                  
-                      <div class="features-icon">
-                      <i class="fa fa-gift"></i>
-                      </div>
-                      
-                      <div class="features-info">
-                         <h4>Fully Responsive</h4>
-                         <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                      </div>
-                  </div>
-              </div>
-
-              
            </div> <!-- /.row-->
        </div> <!-- /.container-->
   </section> 
@@ -419,22 +379,7 @@
         </div>
    </section>
   <!--End portfolio-->
- 
- 
-   <!--Start Call To Action-->
-   <section id="cta" class="parallax">
-       <div class="overlay"></div>
-         <div class="container">
-             <div class="row text-center">
-                 <h2>Are you ready to buy a product</h2>
-                 <a href="#" class="btn btn-green">YES</a>
-           </div>
-         </div>
-   </section>
-   <!--End Call To Action-->
-   
-   
-    
+
   <!--Start Prestations-->
   <section id="team" class="section">
 		<div class="container">

@@ -18,3 +18,10 @@ class HomeView(generic.ListView):
     def get_queryset(self):
         return Produit.objects.all()
 
+
+class ProduitView(generic.ListView):
+    template_name = 'produit.html'
+    context_object_name = 'produits'
+
+    def get_queryset(self):
+        return Produit.objects.all()

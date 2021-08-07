@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-from common.views import HomeView
+from common.views import HomeView, ProduitView
 
 from django.contrib.auth import views as auth_views
 
@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', HomeView.as_view(), name='home'),
+    path('/produit', ProduitView.as_view(), name='produit'),
 ]
 
 
