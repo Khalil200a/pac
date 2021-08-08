@@ -241,33 +241,31 @@
       </div>
   </section>
 		<!--End page-header -->
-
-  <section id="about" class="section">
+  {% for produit in produits %}
+  <section id="{{produit.titre}}" class="section">
       <div class="container">
           <div class="tab-pane" id="tab-content-5">
                 <div class="tab-content-5">
                     <div class="col-md-6">
                          <div class="core-features">
-                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.</p>
-                                <ul class="list">
-                                    <li>Font-Awesome Integration</li>
-                                    <li>Multiple unique designs</li>
-                                    <li>Clean coded, responsive and multipurpose</li>
-                                    <li>Pages valid on w3c.</li>
-                                    <li>Well documented.</li>
-                                    <li>Easy to  customization.</li>
-                                </ul>
+                             <h4>Description :</h4>
+                             <p>{{produit.big_desc|linebreaks}}</p>
+                             <h4>Fonctionnalités :</h4>
+                             <p>{{produit.fonc|linebreaks}}</p>
+                             <h4>{{produit.titre_other}}</h4>
+                             <p>{{produit.desc_other|linebreaks}}</p>
                          </div>
                     </div>
                     <div class="col-md-6">
                         <div class="devices-image">
-                            <img src="images/device-desktop.png" alt=""/>
+                            <img src="{{produit.image.url}}" alt=""/>
                         </div>
                     </div>
                 </div>
           </div>
       </div>
   </section>
+  {% endfor %}
 
    <!--Start Contact-->
    <section id="contact" class="section parallax">
