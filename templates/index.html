@@ -1,13 +1,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 <!doctype html>
-<!--
-	Lamoda by TEMPLATE STOCK
-	templatestock.co @templatestock
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
-
 <html lang="en-gb" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -113,112 +106,111 @@
                       }
                     }
       </style>
-
-   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
         <script src="{% static 'js/html5shiv.js' %}"></script>
         <script src="{% static 'js/respond.min.js' %}"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
         </script>
         <![endif]-->
+  </head>
 
-	<body  data-spy="scroll" data-target="#main-menu">
-
-
-  <!--Start Page loader -->
-  <div id="pageloader">
-        <div class="loader">
-          <img src="{% static 'images/progress.gif' %}" alt='loader' />
-        </div>
-   </div>
-   <!--End Page loader -->
+  <body  data-spy="scroll" data-target="#main-menu">
 
 
-   <!--Start Navigation-->
-		<header id="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sub-menu">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="fa fa-bars"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-                            <!--Start Logo -->
-							<div class="logo-nav">
-								<a href="{% url 'home' %}">
-									<img src="{% static 'images/apple-touch-icon.png' %}" alt="Company logo" height="50px" width="80px" />
-								</a>
-							</div>
-                            <!--End Logo -->
-							<div class="clear-toggle"></div>
-							<div class="sub-menu">
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='#about'" class="nav-btn">About</button>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
-                                    <div class="sub-menu-alt">
-                                        {% for produit in produits %}
-                                            <a href="#">{{produit.titre}}</a>
-                                        {% endfor %}
-                                    </div>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='#team'" class="nav-btn">Prestations</button>
-                                    <div class="sub-menu-alt">
-                                        <a href="#">Expertise vibratoire</a>
-                                        <a href="#">Analyse de structure</a>
-                                        <a href="#">Equilibrage des machines</a>
-                                        <a href="#">Alignement laser</a>
-                                        <a href="#">Diagnostic acoustique</a>
-                                        <a href="#">Cartographie de bruit</a>
-                                        <a href="#">Tribologie</a>
-                                        <a href="#">Analyse par ultrason</a>
-                                    </div>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='#services'" class="nav-btn">Formation</button>
-                                    <div class="sub-menu-alt">
-                                        <a href="#">Programme de formation inter</a>
-                                        <a href="#">Programme de formation intra</a>
-                                        <a href="#">Technologies One proD</a>
-                                        <a href="#">Diagnostic vibratoire niv I</a>
-                                        <a href="#">Diagnostic vibratoire niv II</a>
-                                        <a href="#">Diagnostic vibratoire niv III</a>
-                                        <a href="#">Analyse de structure</a>
-                                        <a href="#">Certification MOBIUS</a>
-                                        <a href="#">Management de la maintenance</a>
-                                        <a href="#">Lean maintenance</a>
-                                    </div>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='#consulting'" class="nav-btn">Consulting</button>
-                                    <div class="sub-menu-alt">
-                                        <a href="#">Audit de la maintenance</a>
-                                        <a href="#">Audit Lean et performance</a>
-                                        <a href="#">Accompagnement Lean</a>
-                                        <a href="#">Accompagnement Maintenance</a>
-                                        <a href="#">Développement des compétences</a>
-                                        <a href="#">Organisation Bureaux Méthodes</a>
-                                    </div>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='#clients'" class="nav-btn">Réferences</button>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='#contact'" class="nav-btn">Contact</button>
-                                  </div>
-                            </div>
-                        </div><!-- end main-menu -->
-                    </div>
+     <!--Start Page loader -->
+      <div id="pageloader">
+            <div class="loader">
+              <img src="{% static 'images/progress.gif' %}" alt='loader' />
+            </div>
+      </div>
+      <!--End Page loader -->
+
+
+      <!--Start Navigation-->
+         <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sub-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-bars"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--Start Logo -->
+                        <div class="logo-nav">
+                            <a href="{% url 'home' %}">
+                                <img src="{% static 'images/apple-touch-icon.png' %}" alt="Company logo" height="50px" width="80px" />
+                            </a>
+                        </div>
+                        <!--End Logo -->
+                        <div class="clear-toggle"></div>
+                        <div class="sub-menu">
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='#about'" class="nav-btn">About</button>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
+                                <div class="sub-menu-alt">
+                                    {% for produit in produits %}
+                                        <a href="#">{{produit.titre}}</a>
+                                    {% endfor %}
+                                </div>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='#team'" class="nav-btn">Prestations</button>
+                                <div class="sub-menu-alt">
+                                    <a href="#">Expertise vibratoire</a>
+                                    <a href="#">Analyse de structure</a>
+                                    <a href="#">Equilibrage des machines</a>
+                                    <a href="#">Alignement laser</a>
+                                    <a href="#">Diagnostic acoustique</a>
+                                    <a href="#">Cartographie de bruit</a>
+                                    <a href="#">Tribologie</a>
+                                    <a href="#">Analyse par ultrason</a>
+                                </div>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='#services'" class="nav-btn">Formation</button>
+                                <div class="sub-menu-alt">
+                                    <a href="#">Programme de formation inter</a>
+                                    <a href="#">Programme de formation intra</a>
+                                    <a href="#">Technologies One proD</a>
+                                    <a href="#">Diagnostic vibratoire niv I</a>
+                                    <a href="#">Diagnostic vibratoire niv II</a>
+                                    <a href="#">Diagnostic vibratoire niv III</a>
+                                    <a href="#">Analyse de structure</a>
+                                    <a href="#">Certification MOBIUS</a>
+                                    <a href="#">Management de la maintenance</a>
+                                    <a href="#">Lean maintenance</a>
+                                </div>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='#consulting'" class="nav-btn">Consulting</button>
+                                <div class="sub-menu-alt">
+                                    <a href="#">Audit de la maintenance</a>
+                                    <a href="#">Audit Lean et performance</a>
+                                    <a href="#">Accompagnement Lean</a>
+                                    <a href="#">Accompagnement Maintenance</a>
+                                    <a href="#">Développement des compétences</a>
+                                    <a href="#">Organisation Bureaux Méthodes</a>
+                                </div>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='#clients'" class="nav-btn">Réferences</button>
+                              </div>
+                              <div class="sub-menu-nav">
+                                <button onclick="location.href='#contact'" class="nav-btn">Contact</button>
+                              </div>
+                        </div>
+                    </div><!-- end main-menu -->
                 </div>
             </div>
-        </header>
+         </header>
     <!--End Navigation-->
 
       
@@ -265,390 +257,389 @@
           <!-- End Slider  -->
 
 
-  <!--Start Features-->
-  <section  id="about" class="section">
-       <div class="container">
-           <div class="row">
-               <!-- Features Icon-->
-               <div class="col-md-4">
-                   <div class="features-icon-box">
-                        <div class="features-icon">
-                          <i class="fa fa-paper-plane"></i>
-                        </div>
+      <!--Start About-->
+      <section  id="about" class="section">
+           <div class="container">
+               <div class="row">
+                   <!-- Features Icon-->
+                   <div class="col-md-4">
+                       <div class="features-icon-box">
+                            <div class="features-icon">
+                              <i class="fa fa-paper-plane"></i>
+                            </div>
 
-                        <div class="features-info">
-                         <h4>Qui sommes nous</h4>
-                         <p></p>
-                        </div>
-                   </div>
-               </div>
-              <!-- Features Icon-->
-               <div class="col-md-4">
-                   <div class="features-icon-box">
-                       <div class="features-icon">
-                            <i class="fa fa-line-chart"></i>
-                       </div>
-                       <div class="features-info">
-                            <h4>Mission et Vision</h4>
-                            <p>La Mission de PAC est de contribuer à l’amélioration et l’optimisation des
-                               équipements industriels de nos clients, dans une volonté d’efficacité
-                               technique et financière : augmenter la disponibilité et la fiabilité de vos
-                               équipements, tout en assurant la sécurité de vos équipes et maitriser la
-                               disponibilité de vos outils de production est pour nous un but à atteindre
-                               Nous souhaitons que les investissements en infrastructures de nos clients
-                               soient durables et apportent un retour sur investissement satisfaisant pour
-                               l’ensemble des parties prenantes des projets.</p>
+                            <div class="features-info">
+                             <h4>Qui sommes nous</h4>
+                             <p></p>
+                            </div>
                        </div>
                    </div>
-               </div>
+                  <!-- Features Icon-->
+                   <div class="col-md-4">
+                       <div class="features-icon-box">
+                           <div class="features-icon">
+                                <i class="fa fa-line-chart"></i>
+                           </div>
+                           <div class="features-info">
+                                <h4>Mission et Vision</h4>
+                                <p>La Mission de PAC est de contribuer à l’amélioration et l’optimisation des
+                                   équipements industriels de nos clients, dans une volonté d’efficacité
+                                   technique et financière : augmenter la disponibilité et la fiabilité de vos
+                                   équipements, tout en assurant la sécurité de vos équipes et maitriser la
+                                   disponibilité de vos outils de production est pour nous un but à atteindre
+                                   Nous souhaitons que les investissements en infrastructures de nos clients
+                                   soient durables et apportent un retour sur investissement satisfaisant pour
+                                   l’ensemble des parties prenantes des projets.</p>
+                           </div>
+                       </div>
+                   </div>
 
-               <!-- Features Icon-->
-               <div class="col-md-4">
-                  <div class="features-icon-box">
+                   <!-- Features Icon-->
+                   <div class="col-md-4">
+                      <div class="features-icon-box">
 
-                      <div class="features-icon">
-                      <i class="fa fa-leaf"></i>
-                      </div>
+                          <div class="features-icon">
+                          <i class="fa fa-leaf"></i>
+                          </div>
 
-                      <div class="features-info">
-                         <h4>Valeurs</h4>
-                         <p></p>
+                          <div class="features-info">
+                             <h4>Valeurs</h4>
+                             <p></p>
+                          </div>
                       </div>
                   </div>
-              </div>
 
-           </div> <!-- /.row-->
-       </div> <!-- /.container-->
-  </section> 
-  <!--End Features-->
+               </div> <!-- /.row-->
+           </div> <!-- /.container-->
+      </section>
+      <!--End About-->
 
-   <!--Start portfolio-->
-   <section id="produit" class="section">
-				 <!-- Filtering -->
-        <div class="title-box text-center">
-            <h2 class="title">Nos Produits</h2>
-        </div>
-        <div class=" col-md-12 text-center">
-            <!-- Filtering -->
-            <ul class="filtering">
-                <li class="filter" data-filter="all">All</li>
-                <li class="filter" data-filter="shaft alignment">shaft alignment</li>
-                <li class="filter" data-filter="CONDITION MONITORING">CONDITION MONITORING</li>
-            </ul>
-        </div>
-        <div class="work-main">
-            <!-- Produit item Grid -->
-            <ul class="work-grid">
+       <!--Start Produit-->
+       <section id="produit" class="section">
+                     <!-- Filtering -->
+            <div class="title-box text-center">
+                <h2 class="title">Nos Produits</h2>
+            </div>
+            <div class=" col-md-12 text-center">
+                <!-- Filtering -->
+                <ul class="filtering">
+                    <li class="filter" data-filter="all">All</li>
+                    <li class="filter" data-filter="shaft alignment">shaft alignment</li>
+                    <li class="filter" data-filter="CONDITION MONITORING">CONDITION MONITORING</li>
+                </ul>
+            </div>
+            <div class="work-main">
+                <!-- Produit item Grid -->
+                <ul class="work-grid">
 
-                {% for produit in produits %}
-                    <!-- Produit Item -->
-                        {% if produit.filter == "shaft alignment" %}
-                            <li class="work-item thumnail-img mix shaft alignment">
-                        {% elif produit.filter == "CONDITION MONITORING" %}
-                            <li class="work-item thumnail-img mix CONDITION MONITORING">
-                        {% else %}
-                            <li class="work-item thumnail-img mix">
-                        {% endif %}
-                        <div class="work-image">
-                            <img src="{{produit.image.url}}" class="rounded float-right">
+                    {% for produit in produits %}
+                        <!-- Produit Item -->
+                            {% if produit.filter == "shaft alignment" %}
+                                <li class="work-item thumnail-img mix shaft alignment">
+                            {% elif produit.filter == "CONDITION MONITORING" %}
+                                <li class="work-item thumnail-img mix CONDITION MONITORING">
+                            {% else %}
+                                <li class="work-item thumnail-img mix">
+                            {% endif %}
+                            <div class="work-image">
+                                <img src="{{produit.image.url}}" class="rounded float-right">
 
-                             <!--Hover link-->
-                             <div class="hover-link">
-                                <a href="single-work.html">
-                                    <i class="fa fa-link"></i>
-                                </a>
-                                <a href="{{produit.image.url}}" class="popup-image">
-                                    <i class="fa fa-plus"></i>
-                                </a>
-                             </div>
-                             <!--End link-->
-                             <!--Hover Caption-->
-                             <div class="work-caption">
-                                 <h4>{{produit.titre}}</h4>
-                                 <p>{{produit.small_desc | linebreaks}}</p>
-                             </div>
-                             <!--End Caption-->
-                        </div>
-                    </li>
-                     <!--End Produit Item -->
-                {% endfor %}
-            </ul>
-        </div>
-   </section>
-  <!--End portfolio-->
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="single-work.html">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="{{produit.image.url}}" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>{{produit.titre}}</h4>
+                                     <p>{{produit.small_desc | linebreaks}}</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div>
+                        </li>
+                         <!--End Produit Item -->
+                    {% endfor %}
+                </ul>
+            </div>
+       </section>
+      <!--End Produit-->
 
-  <!--Start Prestations-->
-  <section id="team" class="section">
-		<div class="container">
-            <div class="row">
-                    
-             <div class="title-box text-center">
-                <h2 class="title">Presatations</h2>
-             </div>
-              
-             </div>
-			
-                <!-- Team -->
-				<div class="team-items team-carousel">
-                      <!-- Prestation Member #1 -->
-                      <div class="item">
-                          <h4>Expertise vibratoire</h4>
-                          <p>Expertise vibratoire est une opération qui vise à identifier les origines des
-                            vibrations sur des machines tournantes , par des prélèvements des mesures
-                            vibratoire périodique,
-                            Nos experts rejoignent et accompagne votre équipe dans la résolution des
-                            problématiques de vibration de vos équipements</p>
-                      </div>
-                      <!-- End Member -->
-                      
-                      <!-- Prestation Member #2 -->
-                      <div class="item">
-                          <h4>Analyse de structure</h4>
-                          <p></p>
-                      </div>
-                      <!-- End Member -->
-                      
-                      <!-- Prestation Member #3 -->
-                      <div class="item">
-                          <h4>Equilibrage des machines</h4>
-                          <p>L'équilibrage
-                            de votre machine tournante donne obligatoirement
-                            lieu à la délivrance d’un rapport complet et détaillé de l'expertise
-                            effectuée par un de nos experts.
-                            La procédure d’équilibrage consiste à réaliser des essais
-                            d’influence de masses sur des plans d’équilibrage que nous
-                            définissons (flasque d’une roue et ailettes de ventilateurs,
-                            accouplements, trous ou pistes d’équilibrage , …) afin de
-                            déterminer la quantité et la localisation des masses de correction
-                            à l’aide de nos logiciels de calculs.</p>
-                      </div>
-                      <!-- End Member -->
-                      
-                       <!-- Prestation Member #4 -->
-                      <div class="item">
-                          <h4>Alignement laser</h4>
-                          <p>les machines tournantes sont sensibles aux défauts
-                            d’alignement. Les machines correctement alignées et
-                            régulièrement contrôlées permettent de faire une économie
-                            considérable sur les coûts d’exploitation et de maintenance.
-                            A plusieurs égards, l’alignement précis des arbres permet de
-                            grosses économies sur les coûts :</p>
-                          <p>•Réduction de la consommation de courant</p>
-                          <p>•Les paliers s’usent moins</p>
-                          <p>•Etanchéités, arbres et accouplements</p>
-                          <p>•Pas de températures élevées sur le palier et l’accouplement</p>
-                          <p>•Réduction des vibrations sur les arbres et les vis de fondations</p>
-                          <p>•Altérations fortement réduite des arbres et vis de fondations.</p>
+      <!--Start Prestations-->
+      <section id="team" class="section">
+            <div class="container">
+                <div class="row">
 
-                      </div>
-                      <!-- End Member -->
-                      
-                       <!-- Prestation Member #5 -->
-                      <div class="item">
-                          <h4>Diagnostic acoustique</h4>
-                          <p></p>
-                      </div>
-                      <!-- End Member -->
-                      
-                       <!-- Prestation Member #6 -->
-                      <div class="item">
-                          <h4>Cartographie de bruit</h4>
-                          <p></p>
-                      </div>
-                      <!-- End Member -->
-                     <!-- Prestation Member #7 -->
-                      <div class="item">
-                          <h4>Tribologie</h4>
-                          <p></p>
-                      </div>
-                      <!-- End Member -->
-                    <!-- Prestation Member #8 -->
-                      <div class="item">
-                          <h4>Analyse par ultrason</h4>
-                          <p></p>
-                      </div>
-                      <!-- End Member -->
-				</div>
-                <!-- End Team -->
-			</div>
-            <!-- End Content -->
-	</section>
-  <!--End Team-->
-
-
-    <!--Start Skills-->
-
-    <!--Start Formation-->
-   <section id="services" class="section">
-        <div class="container">
-            <div class="row">
-            
                  <div class="title-box text-center">
-                    <h2 class="title">Formation</h2>
+                    <h2 class="title">Presatations</h2>
                  </div>
-              
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Programme de formation inter</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-                
-                <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Programme de formation intra</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
 
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Technologies One proD</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-                
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Diagnostic vibratoire niv I</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-               
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Diagnostic vibratoire niv II</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-              
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Diagnostic vibratoire niv III</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Analyse de structure</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Certification MOBIUS</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                          <h4>Management de la maintenance</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-               <!--Formation Item-->
-               <div class="col-md-4">
-                   <div class="services-box">
-                       <h4>Lean maintenance</h4>
-                   </div>
-               </div>
-                <!--End Formation Item-->
-            </div> <!--/.row-->
-        </div> <!--/.container-->
-   </section> 
-  <!--End Formation-->
-
-   <!-- Start consulting-->
-   <section id="consulting" class="section">
-       <div class="container">
-           <div class="row">
-           
-                 <div class="title-box text-center">
-                    <h2 class="title">Consulting</h2>
                  </div>
-                
-               <!-- Start Consulting item #1-->
-               <div class="col-md-4">
-                   <div class="consulting-post">
-                       <div class="post-desc">
-                           <h4>Audit de la maintenance</h4>
-                           <p><strong>audit de la maintenance industrielle</strong> est la première
-                            étape, nécessaire, d'un projet d'amélioration,
-                            d'optimisation des pratiques en place sur un site de
-                            production en vue d'optimiser les performances
-                            Pour en maîtriser les conséquences et les risques
-                            associés, apporter des améliorations doit se faire de
-                            façon structurée et méthodique
-                            Capitaliser
-                            sur les points forts existants et bien ancrés
-                            nécessite <strong>expertise</strong> et <strong>savoir faire</strong> de la part des acteurs
-                            de changement qui interviennent</p>
-                       </div>
-                   </div>
-               </div>
-               
-               <!-- Start Consulting item #2-->
-               <div class="col-md-4">
-                   <div class="consulting-post">
-                       <div class="post-desc">
-                           <h4>Audit Lean et performance</h4>
-                            <p></p>
-                       </div>
-                   </div>
-               </div>
-               
-               <!-- Start Consulting item #3-->
-               <div class="col-md-4">
-                   <div class="consulting-post">
-                       <div class="post-desc">
-                           <h4>Accompagnement Lean</h4>
-                            <p></p>
-                       </div>
-                   </div>
-               </div>
 
-               <!-- Start Consulting item #4-->
-               <div class="col-md-4">
-                   <div class="consulting-post">
-                       <div class="post-desc">
-                           <h4>Accompagnement Maintenance</h4>
-                            <p></p>
-                       </div>
-                   </div>
-               </div>
+                    <!-- Team -->
+                    <div class="team-items team-carousel">
+                          <!-- Prestation Member #1 -->
+                          <div class="item">
+                              <h4>Expertise vibratoire</h4>
+                              <p>Expertise vibratoire est une opération qui vise à identifier les origines des
+                                vibrations sur des machines tournantes , par des prélèvements des mesures
+                                vibratoire périodique,
+                                Nos experts rejoignent et accompagne votre équipe dans la résolution des
+                                problématiques de vibration de vos équipements</p>
+                          </div>
+                          <!-- End Member -->
 
-               <!-- Start Consulting item #5-->
-               <div class="col-md-4">
-                   <div class="consulting-post">
-                       <div class="post-desc">
-                           <h4>Développement des compétences</h4>
-                            <p></p>
-                       </div>
-                   </div>
-               </div>
+                          <!-- Prestation Member #2 -->
+                          <div class="item">
+                              <h4>Analyse de structure</h4>
+                              <p></p>
+                          </div>
+                          <!-- End Member -->
 
-               <!-- Start Consulting item #6-->
-               <div class="col-md-4">
-                   <div class="consulting-post">
-                       <div class="post-desc">
-                           <h4>Organisation Bureaux Méthodes</h4>
-                            <p></p>
+                          <!-- Prestation Member #3 -->
+                          <div class="item">
+                              <h4>Equilibrage des machines</h4>
+                              <p>L'équilibrage
+                                de votre machine tournante donne obligatoirement
+                                lieu à la délivrance d’un rapport complet et détaillé de l'expertise
+                                effectuée par un de nos experts.
+                                La procédure d’équilibrage consiste à réaliser des essais
+                                d’influence de masses sur des plans d’équilibrage que nous
+                                définissons (flasque d’une roue et ailettes de ventilateurs,
+                                accouplements, trous ou pistes d’équilibrage , …) afin de
+                                déterminer la quantité et la localisation des masses de correction
+                                à l’aide de nos logiciels de calculs.</p>
+                          </div>
+                          <!-- End Member -->
+
+                           <!-- Prestation Member #4 -->
+                          <div class="item">
+                              <h4>Alignement laser</h4>
+                              <p>les machines tournantes sont sensibles aux défauts
+                                d’alignement. Les machines correctement alignées et
+                                régulièrement contrôlées permettent de faire une économie
+                                considérable sur les coûts d’exploitation et de maintenance.
+                                A plusieurs égards, l’alignement précis des arbres permet de
+                                grosses économies sur les coûts :</p>
+                              <p>•Réduction de la consommation de courant</p>
+                              <p>•Les paliers s’usent moins</p>
+                              <p>•Etanchéités, arbres et accouplements</p>
+                              <p>•Pas de températures élevées sur le palier et l’accouplement</p>
+                              <p>•Réduction des vibrations sur les arbres et les vis de fondations</p>
+                              <p>•Altérations fortement réduite des arbres et vis de fondations.</p>
+
+                          </div>
+                          <!-- End Member -->
+
+                           <!-- Prestation Member #5 -->
+                          <div class="item">
+                              <h4>Diagnostic acoustique</h4>
+                              <p></p>
+                          </div>
+                          <!-- End Member -->
+
+                           <!-- Prestation Member #6 -->
+                          <div class="item">
+                              <h4>Cartographie de bruit</h4>
+                              <p></p>
+                          </div>
+                          <!-- End Member -->
+                         <!-- Prestation Member #7 -->
+                          <div class="item">
+                              <h4>Tribologie</h4>
+                              <p></p>
+                          </div>
+                          <!-- End Member -->
+                        <!-- Prestation Member #8 -->
+                          <div class="item">
+                              <h4>Analyse par ultrason</h4>
+                              <p></p>
+                          </div>
+                          <!-- End Member -->
+                    </div>
+                    <!-- End Team -->
+                </div>
+                <!-- End Content -->
+        </section>
+      <!--End Team-->
+
+
+
+        <!--Start Formation-->
+       <section id="services" class="section">
+            <div class="container">
+                <div class="row">
+
+                     <div class="title-box text-center">
+                        <h2 class="title">Formation</h2>
+                     </div>
+
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Programme de formation inter</h4>
                        </div>
                    </div>
-               </div>
-           </div> <!--/.row-->
-       </div> <!--/.container-->
-   </section>
-   <!-- End consulting-->
+                    <!--End Formation Item-->
+
+                    <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Programme de formation intra</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Technologies One proD</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Diagnostic vibratoire niv I</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Diagnostic vibratoire niv II</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Diagnostic vibratoire niv III</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Analyse de structure</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Certification MOBIUS</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                              <h4>Management de la maintenance</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+                   <!--Formation Item-->
+                   <div class="col-md-4">
+                       <div class="services-box">
+                           <h4>Lean maintenance</h4>
+                       </div>
+                   </div>
+                    <!--End Formation Item-->
+                </div> <!--/.row-->
+            </div> <!--/.container-->
+       </section>
+      <!--End Formation-->
+
+       <!-- Start consulting-->
+       <section id="consulting" class="section">
+           <div class="container">
+               <div class="row">
+
+                     <div class="title-box text-center">
+                        <h2 class="title">Consulting</h2>
+                     </div>
+
+                   <!-- Start Consulting item #1-->
+                   <div class="col-md-4">
+                       <div class="consulting-post">
+                           <div class="post-desc">
+                               <h4>Audit de la maintenance</h4>
+                               <p><strong>audit de la maintenance industrielle</strong> est la première
+                                étape, nécessaire, d'un projet d'amélioration,
+                                d'optimisation des pratiques en place sur un site de
+                                production en vue d'optimiser les performances
+                                Pour en maîtriser les conséquences et les risques
+                                associés, apporter des améliorations doit se faire de
+                                façon structurée et méthodique
+                                Capitaliser
+                                sur les points forts existants et bien ancrés
+                                nécessite <strong>expertise</strong> et <strong>savoir faire</strong> de la part des acteurs
+                                de changement qui interviennent</p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Start Consulting item #2-->
+                   <div class="col-md-4">
+                       <div class="consulting-post">
+                           <div class="post-desc">
+                               <h4>Audit Lean et performance</h4>
+                                <p></p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Start Consulting item #3-->
+                   <div class="col-md-4">
+                       <div class="consulting-post">
+                           <div class="post-desc">
+                               <h4>Accompagnement Lean</h4>
+                                <p></p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Start Consulting item #4-->
+                   <div class="col-md-4">
+                       <div class="consulting-post">
+                           <div class="post-desc">
+                               <h4>Accompagnement Maintenance</h4>
+                                <p></p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Start Consulting item #5-->
+                   <div class="col-md-4">
+                       <div class="consulting-post">
+                           <div class="post-desc">
+                               <h4>Développement des compétences</h4>
+                                <p></p>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Start Consulting item #6-->
+                   <div class="col-md-4">
+                       <div class="consulting-post">
+                           <div class="post-desc">
+                               <h4>Organisation Bureaux Méthodes</h4>
+                                <p></p>
+                           </div>
+                       </div>
+                   </div>
+               </div> <!--/.row-->
+           </div> <!--/.container-->
+       </section>
+      <!-- End consulting-->
     <!--Start Références-->
     <section id="clients" class="section">
            <div class="container">
@@ -896,7 +887,7 @@
       <div class="overlay"></div>
        <div class="container">
            <div class="row">
-           
+
                  <div class="title-box text-center white">
                     <h2 class="title">Contact</h2>
                  </div>
@@ -904,13 +895,14 @@
 
                <!--Start contact form-->
                <div class="col-md-8 col-md-offset-2 contact-form">
-               
+
                     <div class="contact-info text-center">
-                       <p>06 61 30 59 68 / 022 27 51 66</p>
-                       <p>03 Rue Calavon Elkaram II Rez de Chaussée N : 03 Quartier des Hôpitaux 20340 Casablanca</p>
-                       <p>hassan.ayadi.pac@gmail.com</p>
+                        <p>06 61 30 59 68 / 022 27 51 66</p>
+                        <p>03 Rue Calavon Elkaram II Rez de Chaussée N : 03 </p>
+                        <p>Quartier des Hôpitaux 20340 Casablanca</p>
+                        <p>hassan.ayadi.pac@gmail.com</p>
                     </div>
-                     
+
                      <form method="post">
                         <div class="row">
                             <div class="col-md-4">
@@ -932,7 +924,7 @@
                     </form>
                </div>
               <!--End contact form-->
-              
+
        </div> <!-- /.container-->
    </section>
    <!--End Contact-->
@@ -948,7 +940,7 @@
                  </p></div>
                </div>
                <!--End copyright-->
-               
+
                <!--start social icons-->
                <div class="col-md-6 col-sm-6 col-xs-6">
                    <div class="social-icons">
@@ -980,9 +972,6 @@
     <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js'%}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js'%}"></script>
     <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-
-
-    
- </body>
+  </body>
 </html>
 

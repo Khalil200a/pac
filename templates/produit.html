@@ -121,6 +121,7 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
         </script>
         <![endif]-->
+  </head>
 
 	<body  data-spy="scroll" data-target="#main-menu">
 
@@ -221,6 +222,52 @@
         </header>
     <!--End Navigation-->
 
+  <section id="page-header" class="parallax">
+      <div class="overlay"></div>
+			<div class="container">
+				<h1>Produit</h1>
+                <div class="breadcrumb">
+					<ul>
+						<li>
+							<a href="{% url 'home' %}">Home</a>
+						</li>
+						<li class="current">
+							<a href="{% url 'produit' %}">Produits</a>
+						</li>
+					</ul>
+				</div>
+                <!--End Breadcrumb-->
+            </div>
+      </div>
+  </section>
+		<!--End page-header -->
+
+  <section id="about" class="section">
+      <div class="container">
+          <div class="tab-pane" id="tab-content-5">
+                <div class="tab-content-5">
+                    <div class="col-md-6">
+                         <div class="core-features">
+                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.</p>
+                                <ul class="list">
+                                    <li>Font-Awesome Integration</li>
+                                    <li>Multiple unique designs</li>
+                                    <li>Clean coded, responsive and multipurpose</li>
+                                    <li>Pages valid on w3c.</li>
+                                    <li>Well documented.</li>
+                                    <li>Easy to  customization.</li>
+                                </ul>
+                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="devices-image">
+                            <img src="images/device-desktop.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </div>
+  </section>
 
    <!--Start Contact-->
    <section id="contact" class="section parallax">
