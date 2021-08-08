@@ -164,14 +164,14 @@
                               <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#team'" class="nav-btn">Prestations</button>
                                 <div class="sub-menu-alt">
-                                    <a href="#">Expertise vibratoire</a>
-                                    <a href="#">Analyse de structure</a>
-                                    <a href="#">Equilibrage des machines</a>
-                                    <a href="#">Alignement laser</a>
-                                    <a href="#">Diagnostic acoustique</a>
-                                    <a href="#">Cartographie de bruit</a>
-                                    <a href="#">Tribologie</a>
-                                    <a href="#">Analyse par ultrason</a>
+                                    <a href="{% url 'home' %}#ev">Expertise vibratoire</a>
+                                    <a href="{% url 'home' %}#ads">Analyse de structure</a>
+                                    <a href="{% url 'home' %}#edm">Equilibrage des machines</a>
+                                    <a href="{% url 'home' %}#al">Alignement laser</a>
+                                    <a href="{% url 'home' %}#da">Diagnostic acoustique</a>
+                                    <a href="{% url 'home' %}#"cdb>Cartographie de bruit</a>
+                                    <a href="{% url 'home' %}#t">Tribologie</a>
+                                    <a href="{% url 'home' %}#apu">Analyse par ultrason</a>
                                 </div>
                               </div>
                               <div class="sub-menu-nav">
@@ -383,7 +383,7 @@
                     <!-- Team -->
                     <div class="team-items team-carousel">
                           <!-- Prestation Member #1 -->
-                          <div class="item">
+                          <div id="ev" class="item">
                               <h4>Expertise vibratoire</h4>
                               <p>Expertise vibratoire est une opération qui vise à identifier les origines des
                                 vibrations sur des machines tournantes , par des prélèvements des mesures
@@ -394,14 +394,14 @@
                           <!-- End Member -->
 
                           <!-- Prestation Member #2 -->
-                          <div class="item">
+                          <div id="ads" class="item">
                               <h4>Analyse de structure</h4>
-                              <p></p>
+                              <p>Étude des divers types de charges qui peuvent solliciter une structure. Déformations des systèmes isostatiques. Analyse des systèmes hyperstatiques par diverses méthodes telles que la méthode de décomposition et de superposition, la méthode des rotations, la méthode de distribution des moments. Lignes d'influence pour les poutres et les treillis. Analyse des structures au moyen de la méthode matricielle de rigidité; matrice de rigidité d'une membrure; matrice de rigidité de la structure; solution des équations générales. Utilisation de logiciels.</p>
                           </div>
                           <!-- End Member -->
 
                           <!-- Prestation Member #3 -->
-                          <div class="item">
+                          <div id="edm" class="item">
                               <h4>Equilibrage des machines</h4>
                               <p>L'équilibrage
                                 de votre machine tournante donne obligatoirement
@@ -417,7 +417,7 @@
                           <!-- End Member -->
 
                            <!-- Prestation Member #4 -->
-                          <div class="item">
+                          <div id="al" class="item">
                               <h4>Alignement laser</h4>
                               <p>les machines tournantes sont sensibles aux défauts
                                 d’alignement. Les machines correctement alignées et
@@ -436,28 +436,36 @@
                           <!-- End Member -->
 
                            <!-- Prestation Member #5 -->
-                          <div class="item">
+                          <div id="da" class="item">
                               <h4>Diagnostic acoustique</h4>
-                              <p></p>
+                              <p>Si le recours direct à un produit isolant ou à une entreprise de pose peut paraître plus simple et moins coûteux, en rénovation le risque est grand que vous soyez déçu du résultat. Si vous n’êtes pas sûr de votre diagnostic, seul un acousticien pourra vous fournir une étude complète et de qualité qui identifiera les sources de bruit, leur cheminement et les parois les plus faibles sur le plan de l’isolation acoustique. Lui seul pourra s’engager sur une garantie de résultat et vous orienter sur une entreprise de pose en mesure de mettre en œuvre les préconisations du diagnostic.</p>
                           </div>
                           <!-- End Member -->
 
                            <!-- Prestation Member #6 -->
-                          <div class="item">
+                          <div id="cdb" class="item">
                               <h4>Cartographie de bruit</h4>
-                              <p></p>
+                              <p>Une carte de bruit (ou carte d'exposition au bruit) est une carte (2D ou 3D) représentant, généralement par des codes de couleur, l'exposition (moyenne) au bruit ambiant.</p>
+                              <p>Les cartes de bruit peuvent être :</p>
+                              <p>•Lmono-exposition : ex : cartographie du bruit des voies ferrées ;</p>
+                              <p>•multi-expositions : ex: carte générale de synthèse ou carte d'exposition au bruit routier et au bruit aérien… ;</p>
+                              <p>•associée à un segment temporaire (matin, journée, nuit…) ;</p>
+                              <p>•faite avant ou après un projet particulier, ou à l'échelle d'un quartier, d'une ville, d'une conurbation ;</p>
+                              <p>•réalisée sur la base d'un modèle et/ou de campagnes de mesures de terrain.</p>
                           </div>
                           <!-- End Member -->
                          <!-- Prestation Member #7 -->
-                          <div class="item">
+                          <div id="t" class="item">
                               <h4>Tribologie</h4>
-                              <p></p>
+                              <p>La tribologie est la science qui étudie les phénomènes susceptibles de se produire entre deux systèmes matériels en contact, immobiles ou animés de mouvements relatifs. Ce terme recouvre, entre autres, tous les domaines du frottement, de l’usure, de l'étude des interfaces et de la lubrification2.</p>
+                              <p>C'est une branche du génie mécanique et de la science des matériaux qui a des applications concrètes en archéologie, dermatologie, cosmétique, dans l'industrie, les transports et la biomécanique.</p>
+                              <p>Ce terme désigne aussi la discipline psycho-physiologique qui étudie comment les êtres vivants perçoivent les frottements dont ils sont le siège et les vibrations qui en résultent.</p>
                           </div>
                           <!-- End Member -->
                         <!-- Prestation Member #8 -->
-                          <div class="item">
+                          <div id="apu" class="item">
                               <h4>Analyse par ultrason</h4>
-                              <p></p>
+                              <p>Le principe du contrôle par ultrasons consiste à émettre et faire se propager une onde ultrasonore dans la pièce à inspecter puis à recueillir et analyser l'onde à l'issue de son interaction avec le matériau.</p>
                           </div>
                           <!-- End Member -->
                     </div>
