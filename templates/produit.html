@@ -165,7 +165,7 @@
                                     <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
                                     <div class="sub-menu-alt">
                                         {% for produit in produits %}
-                                            <a href="#">{{produit.titre}}</a>
+                                            <a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a>
                                         {% endfor %}
                                     </div>
                                   </div>
