@@ -162,18 +162,18 @@
                                 </div>
                               </div>
                               <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#team'" class="nav-btn">Prestations</button>
+                                <button onclick="location.href='{% url 'home' %}#prestation'" class="nav-btn">Prestations</button>
                                 <div class="sub-menu-alt">
                                     {% for prestation in prestations %}
-                                            <a href="#">{{prestation.titre}}</a>
+                                            <a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a>
                                     {% endfor %}
                                 </div>
                               </div>
                               <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#services'" class="nav-btn">Formation</button>
+                                <button onclick="location.href='{% url 'home' %}#formation'" class="nav-btn">Formation</button>
                                 <div class="sub-menu-alt">
                                     {% for formation in formations %}
-                                            <a href="#">{{formation.titre}}</a>
+                                            <a href="{% url 'home' %}#{{formation.titre}}">{{formation.titre}}</a>
                                     {% endfor %}
                                 </div>
                               </div>
@@ -181,12 +181,12 @@
                                 <button onclick="location.href='{% url 'home' %}#consulting'" class="nav-btn">Consulting</button>
                                 <div class="sub-menu-alt">
                                     {% for consulting in consultings %}
-                                            <a href="#">{{consulting.titre}}</a>
+                                            <a href="{% url 'home' %}#{{consulting.titre}}">{{consulting.titre}}</a>
                                     {% endfor %}
                                 </div>
                               </div>
                               <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#clients'" class="nav-btn">Réferences</button>
+                                <button onclick="location.href='{% url 'home' %}#références'" class="nav-btn">Réferences</button>
                               </div>
                               <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#contact'" class="nav-btn">Contact</button>
@@ -355,7 +355,7 @@
       <!--End Produit-->
 
       <!--Start Prestations-->
-      <section id="team" class="section">
+      <section id="prestation" class="section">
             <div class="container">
                 <div class="row">
 
@@ -365,96 +365,16 @@
 
                  </div>
 
-                    <!-- Team -->
+                    <!-- Prestation -->
                     <div class="team-items team-carousel">
-                          <!-- Prestation Member #1 -->
-                          <div id="ev" class="item">
-                              <h4>Expertise vibratoire</h4>
-                              <p>Expertise vibratoire est une opération qui vise à identifier les origines des
-                                vibrations sur des machines tournantes , par des prélèvements des mesures
-                                vibratoire périodique,
-                                Nos experts rejoignent et accompagne votre équipe dans la résolution des
-                                problématiques de vibration de vos équipements</p>
-                          </div>
-                          <!-- End Member -->
-
-                          <!-- Prestation Member #2 -->
-                          <div id="ads" class="item">
-                              <h4>Analyse de structure</h4>
-                              <p>Étude des divers types de charges qui peuvent solliciter une structure. Déformations des systèmes isostatiques. Analyse des systèmes hyperstatiques par diverses méthodes telles que la méthode de décomposition et de superposition, la méthode des rotations, la méthode de distribution des moments. Lignes d'influence pour les poutres et les treillis. Analyse des structures au moyen de la méthode matricielle de rigidité; matrice de rigidité d'une membrure; matrice de rigidité de la structure; solution des équations générales. Utilisation de logiciels.</p>
-                          </div>
-                          <!-- End Member -->
-
-                          <!-- Prestation Member #3 -->
-                          <div id="edm" class="item">
-                              <h4>Equilibrage des machines</h4>
-                              <p>L'équilibrage
-                                de votre machine tournante donne obligatoirement
-                                lieu à la délivrance d’un rapport complet et détaillé de l'expertise
-                                effectuée par un de nos experts.
-                                La procédure d’équilibrage consiste à réaliser des essais
-                                d’influence de masses sur des plans d’équilibrage que nous
-                                définissons (flasque d’une roue et ailettes de ventilateurs,
-                                accouplements, trous ou pistes d’équilibrage , …) afin de
-                                déterminer la quantité et la localisation des masses de correction
-                                à l’aide de nos logiciels de calculs.</p>
-                          </div>
-                          <!-- End Member -->
-
-                           <!-- Prestation Member #4 -->
-                          <div id="al" class="item">
-                              <h4>Alignement laser</h4>
-                              <p>les machines tournantes sont sensibles aux défauts
-                                d’alignement. Les machines correctement alignées et
-                                régulièrement contrôlées permettent de faire une économie
-                                considérable sur les coûts d’exploitation et de maintenance.
-                                A plusieurs égards, l’alignement précis des arbres permet de
-                                grosses économies sur les coûts :</p>
-                              <p>•Réduction de la consommation de courant</p>
-                              <p>•Les paliers s’usent moins</p>
-                              <p>•Etanchéités, arbres et accouplements</p>
-                              <p>•Pas de températures élevées sur le palier et l’accouplement</p>
-                              <p>•Réduction des vibrations sur les arbres et les vis de fondations</p>
-                              <p>•Altérations fortement réduite des arbres et vis de fondations.</p>
-
-                          </div>
-                          <!-- End Member -->
-
-                           <!-- Prestation Member #5 -->
-                          <div id="da" class="item">
-                              <h4>Diagnostic acoustique</h4>
-                              <p>Si le recours direct à un produit isolant ou à une entreprise de pose peut paraître plus simple et moins coûteux, en rénovation le risque est grand que vous soyez déçu du résultat. Si vous n’êtes pas sûr de votre diagnostic, seul un acousticien pourra vous fournir une étude complète et de qualité qui identifiera les sources de bruit, leur cheminement et les parois les plus faibles sur le plan de l’isolation acoustique. Lui seul pourra s’engager sur une garantie de résultat et vous orienter sur une entreprise de pose en mesure de mettre en œuvre les préconisations du diagnostic.</p>
-                          </div>
-                          <!-- End Member -->
-
-                           <!-- Prestation Member #6 -->
-                          <div id="cdb" class="item">
-                              <h4>Cartographie de bruit</h4>
-                              <p>Une carte de bruit (ou carte d'exposition au bruit) est une carte (2D ou 3D) représentant, généralement par des codes de couleur, l'exposition (moyenne) au bruit ambiant.</p>
-                              <p>Les cartes de bruit peuvent être :</p>
-                              <p>•Lmono-exposition : ex : cartographie du bruit des voies ferrées ;</p>
-                              <p>•multi-expositions : ex: carte générale de synthèse ou carte d'exposition au bruit routier et au bruit aérien… ;</p>
-                              <p>•associée à un segment temporaire (matin, journée, nuit…) ;</p>
-                              <p>•faite avant ou après un projet particulier, ou à l'échelle d'un quartier, d'une ville, d'une conurbation ;</p>
-                              <p>•réalisée sur la base d'un modèle et/ou de campagnes de mesures de terrain.</p>
-                          </div>
-                          <!-- End Member -->
-                         <!-- Prestation Member #7 -->
-                          <div id="t" class="item">
-                              <h4>Tribologie</h4>
-                              <p>La tribologie est la science qui étudie les phénomènes susceptibles de se produire entre deux systèmes matériels en contact, immobiles ou animés de mouvements relatifs. Ce terme recouvre, entre autres, tous les domaines du frottement, de l’usure, de l'étude des interfaces et de la lubrification2.</p>
-                              <p>C'est une branche du génie mécanique et de la science des matériaux qui a des applications concrètes en archéologie, dermatologie, cosmétique, dans l'industrie, les transports et la biomécanique.</p>
-                              <p>Ce terme désigne aussi la discipline psycho-physiologique qui étudie comment les êtres vivants perçoivent les frottements dont ils sont le siège et les vibrations qui en résultent.</p>
-                          </div>
-                          <!-- End Member -->
-                        <!-- Prestation Member #8 -->
-                          <div id="apu" class="item">
-                              <h4>Analyse par ultrason</h4>
-                              <p>Le principe du contrôle par ultrasons consiste à émettre et faire se propager une onde ultrasonore dans la pièce à inspecter puis à recueillir et analyser l'onde à l'issue de son interaction avec le matériau.</p>
-                          </div>
-                          <!-- End Member -->
+                          {% for prestation in prestations %}
+                              <div id="{{prestation.titre}}" class="item">
+                                  <h4>{{prestation.titre}}</h4>
+                                  <p>{{prestation.contenu}}</p>
+                              </div>
+                          {% endfor %}
                     </div>
-                    <!-- End Team -->
+                    <!-- End Prestation -->
                 </div>
                 <!-- End Content -->
         </section>
@@ -463,88 +383,21 @@
 
 
         <!--Start Formation-->
-       <section id="services" class="section">
+       <section id="formation" class="section">
             <div class="container">
                 <div class="row">
-
-                     <div class="title-box text-center">
+                    <div class="title-box text-center">
                         <h2 class="title">Formation</h2>
-                     </div>
-
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Programme de formation inter</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-
+                    </div>
                     <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Programme de formation intra</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Technologies One proD</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Diagnostic vibratoire niv I</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Diagnostic vibratoire niv II</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Diagnostic vibratoire niv III</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Analyse de structure</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Certification MOBIUS</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                              <h4>Management de la maintenance</h4>
-                       </div>
-                   </div>
-                    <!--End Formation Item-->
-                   <!--Formation Item-->
-                   <div class="col-md-4">
-                       <div class="services-box">
-                           <h4>Lean maintenance</h4>
-                       </div>
-                   </div>
+                    {% for formation in formations %}
+                        <div id="{{formation.titre}}" class="col-md-4">
+                           <div class="services-box">
+                               <h4>{{formation.titre}}</h4>
+                               <div>{{formation.contenu}}</div>
+                           </div>
+                        </div>
+                    {% endfor %}
                     <!--End Formation Item-->
                 </div> <!--/.row-->
             </div> <!--/.container-->
@@ -555,86 +408,26 @@
        <section id="consulting" class="section">
            <div class="container">
                <div class="row">
-
-                     <div class="title-box text-center">
-                        <h2 class="title">Consulting</h2>
-                     </div>
-
-                   <!-- Start Consulting item #1-->
-                   <div class="col-md-4">
-                       <div class="consulting-post">
-                           <div class="post-desc">
-                               <h4>Audit de la maintenance</h4>
-                               <p><strong>audit de la maintenance industrielle</strong> est la première
-                                étape, nécessaire, d'un projet d'amélioration,
-                                d'optimisation des pratiques en place sur un site de
-                                production en vue d'optimiser les performances
-                                Pour en maîtriser les conséquences et les risques
-                                associés, apporter des améliorations doit se faire de
-                                façon structurée et méthodique
-                                Capitaliser
-                                sur les points forts existants et bien ancrés
-                                nécessite <strong>expertise</strong> et <strong>savoir faire</strong> de la part des acteurs
-                                de changement qui interviennent</p>
-                           </div>
-                       </div>
+                   <div class="title-box text-center">
+                       <h2 class="title">Consulting</h2>
                    </div>
 
-                   <!-- Start Consulting item #2-->
-                   <div class="col-md-4">
-                       <div class="consulting-post">
-                           <div class="post-desc">
-                               <h4>Audit Lean et performance</h4>
-                                <p></p>
+                   {% for consulting in consultings %}
+                       <div id = "{{consulting.titre}}" class="col-md-4">
+                           <div class="consulting-post">
+                               <div class="post-desc">
+                                   <h4>{{consulting.titre}}</h4>
+                                   <p>{{consulting.contenu}}</p>
+                               </div>
                            </div>
                        </div>
-                   </div>
-
-                   <!-- Start Consulting item #3-->
-                   <div class="col-md-4">
-                       <div class="consulting-post">
-                           <div class="post-desc">
-                               <h4>Accompagnement Lean</h4>
-                                <p></p>
-                           </div>
-                       </div>
-                   </div>
-
-                   <!-- Start Consulting item #4-->
-                   <div class="col-md-4">
-                       <div class="consulting-post">
-                           <div class="post-desc">
-                               <h4>Accompagnement Maintenance</h4>
-                                <p></p>
-                           </div>
-                       </div>
-                   </div>
-
-                   <!-- Start Consulting item #5-->
-                   <div class="col-md-4">
-                       <div class="consulting-post">
-                           <div class="post-desc">
-                               <h4>Développement des compétences</h4>
-                                <p></p>
-                           </div>
-                       </div>
-                   </div>
-
-                   <!-- Start Consulting item #6-->
-                   <div class="col-md-4">
-                       <div class="consulting-post">
-                           <div class="post-desc">
-                               <h4>Organisation Bureaux Méthodes</h4>
-                                <p></p>
-                           </div>
-                       </div>
-                   </div>
+                   {% endfor %}
                </div> <!--/.row-->
            </div> <!--/.container-->
        </section>
       <!-- End consulting-->
     <!--Start Références-->
-    <section id="clients" class="section">
+    <section id="références" class="section">
            <div class="container">
                <div class="row">
                
