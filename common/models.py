@@ -1,11 +1,13 @@
 from django.db import models
 
+
 class Formation(models.Model):
     titre = models.CharField(max_length=200)
     contenu = models.TextField(max_length=1000, blank=True)
 
     def __str__(self):
         return self.titre
+
 
 class Prestation(models.Model):
     titre = models.CharField(max_length=200)
@@ -14,12 +16,14 @@ class Prestation(models.Model):
     def __str__(self):
         return self.titre
 
+
 class Consulting(models.Model):
     titre = models.CharField(max_length=200)
     contenu = models.TextField(max_length=1000, blank=True)
 
     def __str__(self):
         return self.titre
+
 
 class Produit(models.Model):
     titre = models.CharField(max_length=200)
@@ -32,7 +36,6 @@ class Produit(models.Model):
     height = models.CharField(max_length=200, blank=True)
     width = models.CharField(max_length=200, blank=True)
     filter = models.CharField(max_length=200, blank=True)
-
 
     def __str__(self):
         return self.titre
