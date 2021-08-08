@@ -164,40 +164,25 @@
                               <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#team'" class="nav-btn">Prestations</button>
                                 <div class="sub-menu-alt">
-                                    <a href="{% url 'home' %}#ev">Expertise vibratoire</a>
-                                    <a href="{% url 'home' %}#ads">Analyse de structure</a>
-                                    <a href="{% url 'home' %}#edm">Equilibrage des machines</a>
-                                    <a href="{% url 'home' %}#al">Alignement laser</a>
-                                    <a href="{% url 'home' %}#da">Diagnostic acoustique</a>
-                                    <a href="{% url 'home' %}#cdb">Cartographie de bruit</a>
-                                    <a href="{% url 'home' %}#t">Tribologie</a>
-                                    <a href="{% url 'home' %}#apu">Analyse par ultrason</a>
+                                    {% for prestation in prestations %}
+                                            <a href="#">{{prestation.titre}}</a>
+                                    {% endfor %}
                                 </div>
                               </div>
                               <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#services'" class="nav-btn">Formation</button>
                                 <div class="sub-menu-alt">
-                                    <a href="#">Programme de formation inter</a>
-                                    <a href="#">Programme de formation intra</a>
-                                    <a href="#">Technologies One proD</a>
-                                    <a href="#">Diagnostic vibratoire niv I</a>
-                                    <a href="#">Diagnostic vibratoire niv II</a>
-                                    <a href="#">Diagnostic vibratoire niv III</a>
-                                    <a href="#">Analyse de structure</a>
-                                    <a href="#">Certification MOBIUS</a>
-                                    <a href="#">Management de la maintenance</a>
-                                    <a href="#">Lean maintenance</a>
+                                    {% for formation in formations %}
+                                            <a href="#">{{formation.titre}}</a>
+                                    {% endfor %}
                                 </div>
                               </div>
                               <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#consulting'" class="nav-btn">Consulting</button>
                                 <div class="sub-menu-alt">
-                                    <a href="#">Audit de la maintenance</a>
-                                    <a href="#">Audit Lean et performance</a>
-                                    <a href="#">Accompagnement Lean</a>
-                                    <a href="#">Accompagnement Maintenance</a>
-                                    <a href="#">Développement des compétences</a>
-                                    <a href="#">Organisation Bureaux Méthodes</a>
+                                    {% for consulting in consultings %}
+                                            <a href="#">{{consulting.titre}}</a>
+                                    {% endfor %}
                                 </div>
                               </div>
                               <div class="sub-menu-nav">

@@ -49,7 +49,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOCAL_APPS = [
     'common',
-    'userprofile',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS

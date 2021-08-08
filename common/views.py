@@ -1,18 +1,20 @@
 from .models import *
 from django.views import generic
+from django.shortcuts import render
+from django.template import RequestContext
 
+def detail(request):
+    produits = Produit.objects.all()
+    formations = Formation.objects.all()
+    consultings = Consulting.objects.all()
+    prestations = Prestation.objects.all()
+    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations}
+    return render(request, 'index.html', context=context)
 
-class HomeView(generic.ListView):
-    template_name = 'index.html'
-    context_object_name = 'produits'
-
-    def get_queryset(self):
-        return Produit.objects.all()
-
-
-class ProduitView(generic.ListView):
-    template_name = 'produit.html'
-    context_object_name = 'produits'
-
-    def get_queryset(self):
-        return Produit.objects.all()
+def pro(request):
+    produits = Produit.objects.all()
+    formations = Formation.objects.all()
+    consultings = Consulting.objects.all()
+    prestations = Prestation.objects.all()
+    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations}
+    return render(request, 'produit.html', context=context)
