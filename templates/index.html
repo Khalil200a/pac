@@ -370,7 +370,7 @@
                           {% for prestation in prestations %}
                               <div id="{{prestation.titre}}" class="item">
                                   <h4>{{prestation.titre}}</h4>
-                                  <p>{{prestation.contenu}}</p>
+                                  <p>{{prestation.contenu|linebreaks}}</p>
                               </div>
                           {% endfor %}
                     </div>
