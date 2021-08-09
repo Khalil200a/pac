@@ -157,17 +157,35 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="devices-image">
+                            <div class="tab-carousel">
                                 <img src="{{produit.image.url}}" alt=""/>
-                                <img src="{{produit.image2.url}}" alt=""/>
-                                <img src="{{produit.image3.url}}" alt=""/>
-                                <img src="{{produit.image4.url}}" alt=""/>
-                                <img src="{{produit.image5.url}}" alt=""/>
-                                <img src="{{produit.image6.url}}" alt=""/>
-                                <img src="{{produit.image7.url}}" alt=""/>
-                                <img src="{{produit.image8.url}}" alt=""/>
-                                <img src="{{produit.image9.url}}" alt=""/>
-                                <img src="{{produit.image10.url}}" alt=""/>
+                                {% if produit.image2 %}
+                                    <img src="{{produit.image2.url}}" alt=""/>
+                                    {% if produit.image3 %}
+                                        <img src="{{produit.image3.url}}" alt=""/>
+                                        {% if produit.image4 %}
+                                            <img src="{{produit.image4.url}}" alt=""/>
+                                            {% if produit.image5 %}
+                                                <img src="{{produit.image5.url}}" alt=""/>
+                                                {% if produit.image6 %}
+                                                    <img src="{{produit.image6.url}}" alt=""/>
+                                                    {% if produit.image7 %}
+                                                        <img src="{{produit.image7.url}}" alt=""/>
+                                                        {% if produit.image8 %}
+                                                            <img src="{{produit.image8.url}}" alt=""/>
+                                                            {% if produit.image9 %}
+                                                                <img src="{{produit.image9.url}}" alt=""/>
+                                                                {% if produit.image10 %}
+                                                                    <img src="{{produit.image10.url}}" alt=""/>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
