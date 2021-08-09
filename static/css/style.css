@@ -16,6 +16,90 @@ html, body {
 	position: relative;
 }
 
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sub-menu a {
+  float: left;
+  font-size: 16px;
+  min-width: 90px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+.active {
+  background: #2C3E50;
+}
+
+.sub-menu-nav {
+  float: left;
+  overflow: hidden;
+}
+
+.sub-menu-nav .nav-btn {
+  cursor:pointer;
+  min-width: 120px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 5px;
+  transition: all .5s;
+}
+li{
+  list-style-type: none;
+}
+
+.sub-menu a:hover, .sub-menu-nav:hover .nav-btn {
+  background-color: #2C3E50;
+}
+
+.sub-menu-alt {
+  display: none;
+  position: absolute;
+  background-color: #2C3E50;
+  z-index: 1;
+}
+
+.sub-menu-alt ul li a {
+  min-width: 90px;
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.sub-menu-alt ul li a:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.sub-menu-nav:hover .sub-menu-alt {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .sub-menu {
+      flex-direction: column;
+  }
+  .sub-menu-nav {
+    text-align:center;
+    width:100%;
+  }
+  .nav-btn {
+    width:100%;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	margin: 0px 0px 10px;
