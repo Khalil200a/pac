@@ -2317,7 +2317,7 @@ ul.timeline {
 /*-----------------------------------------------------------------*/
 
 #page-header {
-	background:url('../images/page-header.jpg');
+	background:url('../images/slider/backgroung.png');
 	padding: 130px 0px 80px;
 	text-align: center;
 }
@@ -2875,7 +2875,7 @@ li.comment ol.comment-sub {
 /*-----------------------------------------------------------------*/
 
 #contact {
-	background:url(../images/parallax/contact.jpg) no-repeat;
+	background:url(../images/slider/backgroung.png) no-repeat;
 }
 
 .contact-form {
