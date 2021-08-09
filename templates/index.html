@@ -2,51 +2,48 @@
 {% load crispy_forms_tags %}
 <!doctype html>
 <html lang="en-gb" class="no-js">
-  <head>
-    <meta charset="utf-8">
-	<title>Proocess Automation Consulting</title>
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <head>
+        <meta charset="utf-8">
+    	<title>Proocess Automation Consulting</title>
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
 
-	<!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    	<!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-     <!--styles -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
-    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
-    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
-    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
-    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
-    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-  <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="{% static 'js/html5shiv.js' %}"></script>
-        <script src="{% static 'js/respond.min.js' %}"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
-        </script>
+         <!--styles -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+        <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+        <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+        <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+        <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+        <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+            <script src="{% static 'js/html5shiv.js' %}"></script>
+            <script src="{% static 'js/respond.min.js' %}"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
+            </script>
         <![endif]-->
-  </head>
+    </head>
 
-  <body  data-spy="scroll" data-target="#main-menu">
-
-
-     <!--Start Page loader -->
-      <div id="pageloader">
+    <body  data-spy="scroll" data-target="#main-menu">
+        <!--Start Page loader -->
+        <div id="pageloader">
             <div class="loader">
               <img src="{% static 'images/progress.gif' %}" alt='loader' />
             </div>
-      </div>
-      <!--End Page loader -->
+        </div>
+        <!--End Page loader -->
 
-
-      <!--Start Navigation-->
-         <header id="header">
+        <!--Start Navigation-->
+        <header id="header">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -65,13 +62,13 @@
                         <!--End Logo -->
                         <div class="clear-toggle"></div>
                         <div class="sub-menu">
-                              <div class="sub-menu-nav">
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#about'" class="nav-btn">About</button>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
                                 <div class="sub-menu-alt">
                                     <ul>
@@ -80,18 +77,18 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#prestation'" class="nav-btn">Prestations</button>
                                 <div class="sub-menu-alt">
                                     <ul>
-                                    {% for prestation in prestations %}
+                                        {% for prestation in prestations %}
                                             <li><a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a></li>
-                                    {% endfor %}
+                                        {% endfor %}
                                     </ul>
                                 </div>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#formation'" class="nav-btn">Formation</button>
                                 <div class="sub-menu-alt">
                                     <ul>
@@ -100,8 +97,8 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#consulting'" class="nav-btn">Consulting</button>
                                 <div class="sub-menu-alt">
                                     <ul>
@@ -110,88 +107,84 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#références'" class="nav-btn">Réferences</button>
-                              </div>
-                              <div class="sub-menu-nav">
+                            </div>
+                            <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'home' %}#contact'" class="nav-btn">Contact</button>
-                              </div>
+                            </div>
                         </div>
                     </div><!-- end main-menu -->
                 </div>
             </div>
-         </header>
-    <!--End Navigation-->
+        </header>
+        <!--End Navigation-->
 
-      
         <!-- Start Slider  -->
         <section id="home" class="home">
-             <div class="slider-overlay"></div>
+            <div class="slider-overlay"></div>
             <div class="flexslider">
                 <ul class="slides scroll">
                     <li class="first">
-                        <div class="slider-text-wrapper">  
+                        <div class="slider-text-wrapper">
                             <div class="container">
                                 <div class="big">PRODUIT</div>
                                 <div class="small">EAGLE, NXA, FALCON, MVX/MV, RT, NESTI ...</div>
                                 <a href="#produit" class="middle btn btn-white">VOIR NOS PRODUITS</a>
-                            </div>       
+                            </div>
                         </div>
                         <img src="{% static 'images/slider/pump.jpg' %}" alt="">
                     </li>
-                    
                     <li class="secondary">
-                        <div class="slider-text-wrapper"> 
-                            <div class="container">                       
+                        <div class="slider-text-wrapper">
+                            <div class="container">
                                 <div class="big">PRESTATIONS</div>
                                 <div class="small">Expertise vibratoire, Analyse de structure...</div>
                                 <a href="#prestation" class=" middle btn btn-white">VOIR NOS PRESTATIONS</a>
                             </div>
-                         </div>
+                        </div>
                         <img src="{% static 'images/slider/shaft.jpg' %}" alt="">
                     </li>
-                    
                     <li class="third">
-                        <div class="slider-text-wrapper"> 
-                            <div class="container">                              
+                        <div class="slider-text-wrapper">
+                            <div class="container">
                                 <div class="big">FORMATION</div>
                                 <div class="small">Programme de formation inter, Programme de formation intra ...</div>
                                 <a href="#formation" class="middle btn btn-white">VOIR NOS FORMATIONS</a>
-                             </div>
+                            </div>
                         </div>
                         <img src="{% static 'images/slider/service.jpg' %}" alt="">
                     </li>
                 </ul>
             </div>
         </section>
-          <!-- End Slider  -->
+        <!-- End Slider  -->
 
 
-      <!--Start About-->
-      <section  id="about" class="section">
-           <div class="container">
-               <div class="row">
-                   <!-- Features Icon-->
-                   <div class="col-md-4">
-                       <div class="features-icon-box">
+        <!--Start About-->
+        <section  id="about" class="section">
+            <div class="container">
+                <div class="row">
+                    <!-- Features Icon-->
+                    <div class="col-md-4">
+                        <div class="features-icon-box">
                             <div class="features-icon">
-                              <i class="fa fa-paper-plane"></i>
+                                <i class="fa fa-paper-plane"></i>
                             </div>
-
                             <div class="features-info">
-                             <h4>Qui sommes nous</h4>
-                             <p></p>
+                                <h4>Qui sommes nous</h4>
+                                <p></p>
                             </div>
-                       </div>
-                   </div>
-                  <!-- Features Icon-->
-                   <div class="col-md-4">
-                       <div class="features-icon-box">
-                           <div class="features-icon">
+                        </div>
+                    </div>
+                    <!-- Features Icon-->
+                    <div class="col-md-4">
+                        <div class="features-icon-box">
+                            <div class="features-icon">
                                 <i class="fa fa-line-chart"></i>
-                           </div>
-                           <div class="features-info">
+                            </div>
+                            <div class="features-info">
                                 <h4>Mission et Vision</h4>
                                 <p>La Mission de PAC est de contribuer à l’amélioration et l’optimisation des
                                    équipements industriels de nos clients, dans une volonté d’efficacité
@@ -200,34 +193,31 @@
                                    disponibilité de vos outils de production est pour nous un but à atteindre
                                    Nous souhaitons que les investissements en infrastructures de nos clients
                                    soient durables et apportent un retour sur investissement satisfaisant pour
-                                   l’ensemble des parties prenantes des projets.</p>
-                           </div>
-                       </div>
-                   </div>
+                                   l’ensemble des parties prenantes des projets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Features Icon-->
+                    <div class="col-md-4">
+                        <div class="features-icon-box">
+                            <div class="features-icon">
+                                <i class="fa fa-leaf"></i>
+                            </div>
+                            <div class="features-info">
+                                <h4>Valeurs</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.row-->
+            </div> <!-- /.container-->
+        </section>
+        <!--End About-->
 
-                   <!-- Features Icon-->
-                   <div class="col-md-4">
-                      <div class="features-icon-box">
-
-                          <div class="features-icon">
-                          <i class="fa fa-leaf"></i>
-                          </div>
-
-                          <div class="features-info">
-                             <h4>Valeurs</h4>
-                             <p></p>
-                          </div>
-                      </div>
-                  </div>
-
-               </div> <!-- /.row-->
-           </div> <!-- /.container-->
-      </section>
-      <!--End About-->
-
-       <!--Start Produit-->
-       <section id="produit" class="section">
-                     <!-- Filtering -->
+        <!--Start Produit-->
+        <section id="produit" class="section">
+            <!-- Filtering -->
             <div class="title-box text-center">
                 <h2 class="title">Nos Produits</h2>
             </div>
@@ -242,7 +232,6 @@
             <div class="work-main">
                 <!-- Produit item Grid -->
                 <ul class="work-grid">
-
                     {% for produit in produits %}
                         <!-- Produit Item -->
                             {% if produit.filter == "shaft alignment" %}
@@ -254,62 +243,56 @@
                             {% endif %}
                             <div class="work-image">
                                 <img src="{{produit.image.url}}" class="rounded float-right">
-
-                                 <!--Hover link-->
-                                 <div class="hover-link">
+                                <!--Hover link-->
+                                <div class="hover-link">
                                     <a href="{% url 'produit' %}#{{produit.titre}}">
                                         <i class="fa fa-link"></i>
                                     </a>
                                     <a href="{{produit.image.url}}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
-                                 </div>
-                                 <!--End link-->
-                                 <!--Hover Caption-->
-                                 <div class="work-caption">
-                                     <h4>{{produit.titre}}</h4>
-                                     <p>{{produit.small_desc | linebreaks}}</p>
-                                 </div>
-                                 <!--End Caption-->
+                                </div>
+                                <!--End link-->
+                                <!--Hover Caption-->
+                                <div class="work-caption">
+                                    <h4>{{produit.titre}}</h4>
+                                    <p>{{produit.small_desc | linebreaks}}</p>
+                                </div>
+                                <!--End Caption-->
                             </div>
                         </li>
-                         <!--End Produit Item -->
+                        <!--End Produit Item -->
                     {% endfor %}
                 </ul>
             </div>
-       </section>
-      <!--End Produit-->
+        </section>
+        <!--End Produit-->
 
-      <!--Start Prestations-->
-      <section id="prestation" class="section">
+        <!--Start Prestations-->
+        <section id="prestation" class="section">
             <div class="container">
                 <div class="row">
-
-                 <div class="title-box text-center">
-                    <h2 class="title">Presatations</h2>
-                 </div>
-
-                 </div>
-
-                    <!-- Prestation -->
-                    <div class="team-items team-carousel">
-                          {% for prestation in prestations %}
-                              <div id="{{prestation.titre}}" class="item">
-                                  <h4>{{prestation.titre}}</h4>
-                                  <p>{{prestation.contenu|linebreaks}}</p>
-                              </div>
-                          {% endfor %}
+                    <div class="title-box text-center">
+                        <h2 class="title">Presatations</h2>
                     </div>
-                    <!-- End Prestation -->
                 </div>
-                <!-- End Content -->
+                <!-- Prestation -->
+                <div class="team-items team-carousel">
+                   {% for prestation in prestations %}
+                        <div id="{{prestation.titre}}" class="item">
+                            <h4>{{prestation.titre}}</h4>
+                            <p>{{prestation.contenu|linebreaks}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- End Prestation -->
+            </div>
+            <!-- End Content -->
         </section>
-      <!--End Team-->
-
-
+        <!--End Team-->
 
         <!--Start Formation-->
-       <section id="formation" class="section">
+        <section id="formation" class="section">
             <div class="container">
                 <div class="row">
                     <div class="title-box text-center">
@@ -327,43 +310,40 @@
                     <!--End Formation Item-->
                 </div> <!--/.row-->
             </div> <!--/.container-->
-       </section>
-      <!--End Formation-->
+        </section>
+        <!--End Formation-->
 
-       <!-- Start consulting-->
-       <section id="consulting" class="section">
-           <div class="container">
-               <div class="row">
-                   <div class="title-box text-center">
-                       <h2 class="title">Consulting</h2>
-                   </div>
+        <!-- Start consulting-->
+        <section id="consulting" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="title-box text-center">
+                        <h2 class="title">Consulting</h2>
+                    </div>
+                    {% for consulting in consultings %}
+                        <div id = "{{consulting.titre}}" class="col-md-4">
+                            <div class="consulting-post">
+                                <div class="post-desc">
+                                    <h4>{{consulting.titre}}</h4>
+                                    <p>{{consulting.contenu}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div> <!--/.row-->
+            </div> <!--/.container-->
+        </section>
+        <!-- End consulting-->
 
-                   {% for consulting in consultings %}
-                       <div id = "{{consulting.titre}}" class="col-md-4">
-                           <div class="consulting-post">
-                               <div class="post-desc">
-                                   <h4>{{consulting.titre}}</h4>
-                                   <p>{{consulting.contenu}}</p>
-                               </div>
-                           </div>
-                       </div>
-                   {% endfor %}
-               </div> <!--/.row-->
-           </div> <!--/.container-->
-       </section>
-      <!-- End consulting-->
-    <!--Start Références-->
-    <section id="références" class="section">
-           <div class="container">
-               <div class="row">
-               
-            <div class="title-box text-center">
-                <h2 class="title">Réferences</h2>
-             </div>
-                
-                   <div class="clients-carousel">
-                   
-                       <!-- Clients Logo Item-->
+        <!--Start Références-->
+        <section id="références" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="title-box text-center">
+                        <h2 class="title">Réferences</h2>
+                    </div>
+                    <div class="clients-carousel">
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -371,7 +351,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -379,7 +359,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -387,7 +367,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -395,7 +375,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -403,7 +383,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -411,7 +391,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -419,7 +399,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -427,7 +407,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -435,7 +415,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -443,7 +423,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -451,7 +431,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -459,7 +439,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -467,7 +447,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -475,7 +455,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -483,7 +463,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -491,7 +471,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -499,7 +479,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -507,7 +487,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -515,7 +495,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -523,7 +503,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -531,7 +511,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -539,7 +519,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -547,7 +527,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -555,7 +535,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -563,7 +543,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -571,7 +551,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -579,7 +559,7 @@
                                 </figure>
                             </a>
                         </div>
-                       <!-- Clients Logo Item-->
+                        <!-- Clients Logo Item-->
                         <div class="item">
                             <a href="#">
                                 <figure>
@@ -587,81 +567,74 @@
                                 </figure>
                             </a>
                         </div>
-                   </div>
-               </div> <!--/.row-->
-         </div> <!--/.container-->
-    </section>
-   <!--End Réferences-->
-   
-   
-   <!--Start Contact-->
-   <section id="contact" class="section parallax">
-      <div class="overlay"></div>
-       <div class="container">
-           <div class="row">
+                    </div>
+                </div> <!--/.row-->
+            </div> <!--/.container-->
+        </section>
+        <!--End Réferences-->
 
-                 <div class="title-box text-center white">
-                    <h2 class="title">Contact</h2>
-                 </div>
-             </div>
 
-               <!--Start contact form-->
-               <div class="col-md-8 col-md-offset-2 contact-form">
-
+        <!--Start Contact-->
+        <section id="contact" class="section parallax">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="title-box text-center white">
+                        <h2 class="title">Contact</h2>
+                    </div>
+                </div>
+                <!--Start contact form-->
+                <div class="col-md-8 col-md-offset-2 contact-form">
                     <div class="contact-info text-center">
                         <p>06 61 30 59 68 / 022 27 51 66</p>
                         <p>03 Rue Calavon Elkaram II Rez de Chaussée N : 03 </p>
                         <p>Quartier des Hôpitaux 20340 Casablanca</p>
                         <p><a href = "mailto: hassan.ayadi.pac@gmail.com">hassan.ayadi.pac@gmail.com</a></p>
                     </div>
-               </div>
-              <!--End contact form-->
+                </div>
+                <!--End contact form-->
+            </div> <!-- /.container-->
+        </section>
+        <!--End Contact-->
 
-       </div> <!-- /.container-->
-   </section>
-   <!--End Contact-->
-   
-   
-   <!--Start Footer-->
-   <footer>
-       <div class="container">
-           <div class="row">
-               <!--Start copyright-->
-               <div class="col-md-6 col-sm-6 col-xs-6">
-                   <div class="copyright"><p>Copyright © 2021 All Rights reserved by: <a href="https://www.linkedin.com/in/khalil-jemghili-18619b1ba/">Jemghili Khalil</a>
-                 </p></div>
-               </div>
-               <!--End copyright-->
 
-               <!--start social icons-->
-               <div class="col-md-6 col-sm-6 col-xs-6">
-                   <div class="social-icons">
-                       <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li> <a href="https://www.linkedin.com/company/process-automation-consulting/about/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                       </ul>
+        <!--Start Footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <!--Start copyright-->
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="copyright"><p>Copyright © 2021 All Rights reserved by: <a href="https://www.linkedin.com/in/khalil-jemghili-18619b1ba/">Jemghili Khalil</a>
+                        </p></div>
                     </div>
-               </div>
-               <!--End social icons-->
-           </div> <!-- /.row-->
-       </div> <!-- /.container-->
-   </footer>
-   <!--End Footer-->
-
-   <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
-
-    <!--Plugins-->
-	<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-  </body>
+                    <!--End copyright-->
+                    <!--start social icons-->
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li> <a href="https://www.linkedin.com/company/process-automation-consulting/about/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--End social icons-->
+                </div> <!-- /.row-->
+            </div> <!-- /.container-->
+        </footer>
+        <!--End Footer-->
+        <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+        <!--Plugins-->
+    	<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+    </body>
 </html>
 
