@@ -154,6 +154,13 @@
                                 <p>{{produit.fonc|linebreaks}}</p>
                                 <h4>{{produit.titre_other}}</h4>
                                 <p>{{produit.desc_other|linebreaks}}</p>
+                                <h4>For More :</h4>
+                                {% if produit.pdf %}
+                                    <h5><a href="{{produit.pdf.url}}" target="_blank">Brochure</a></h5>
+                                {% endif %}
+                                {% if produit.pdf2 %}
+                                    <h5><a href="{{produit.pdf2.url}}" target="_blank">Fiche Technique</a></h5>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-md-6">

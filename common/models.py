@@ -43,6 +43,7 @@ class Produit(models.Model):
     image9 = models.ImageField(upload_to='users/', null=True, blank=True)
     image10 = models.ImageField(upload_to='users/', null=True, blank=True)
     pdf = models.FileField(upload_to='users/pdfs', null=True, blank=True)
+    pdf2 = models.FileField(upload_to='users/pdfs', null=True, blank=True)
     height = models.CharField(max_length=200, blank=True)
     width = models.CharField(max_length=200, blank=True)
     filter = models.CharField(max_length=200, blank=True)
