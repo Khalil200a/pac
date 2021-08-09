@@ -1,133 +1,128 @@
 {% load static %}
 {% load crispy_forms_tags %}
 <!doctype html>
-
 <html lang="en-gb" class="no-js">
-  <head>
-    <meta charset="utf-8">
-	<title>Proocess Automation Consulting</title>
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <head>
+        <meta charset="utf-8">
+    	<title>Proocess Automation Consulting</title>
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
 
-	<!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-     <!--styles -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
-    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
-    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
-    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
-    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
-    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="{% static 'js/html5shiv.js' %}"></script>
-    <script src="{% static 'js/respond.min.js' %}"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
-    </script>
-    <![endif]-->
-  </head>
-
-  <body  data-spy="scroll" data-target="#main-menu">
+    	<!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-  <!--Start Page loader -->
-  <div id="pageloader">
-        <div class="loader">
-          <img src="{% static 'images/progress.gif' %}" alt='loader' />
+         <!--styles -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+        <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+        <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+        <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+        <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+        <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+            <script src="{% static 'js/html5shiv.js' %}"></script>
+            <script src="{% static 'js/respond.min.js' %}"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
+            </script>
+        <![endif]-->
+    </head>
+
+    <body  data-spy="scroll" data-target="#main-menu">
+        <!--Start Page loader -->
+        <div id="pageloader">
+            <div class="loader">
+              <img src="{% static 'images/progress.gif' %}" alt='loader' />
+            </div>
         </div>
-   </div>
-   <!--End Page loader -->
+        <!--End Page loader -->
 
-
-   <!--Start Navigation-->
-		<header id="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sub-menu">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="fa fa-bars"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-                            <!--Start Logo -->
-							<div class="logo-nav">
-								<a href="{% url 'home' %}">
-									<img src="{% static 'images/apple-touch-icon.png' %}" alt="Company logo" height="50px" width="80px" />
-								</a>
-							</div>
-                            <!--End Logo -->
-							<div class="clear-toggle"></div>
-							<div class="sub-menu">
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'home' %}#about'" class="nav-btn">About</button>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
-                                        <div class="sub-menu-alt">
-                                            <ul>
-                                                {% for produit in produits %}
-                                                    <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a></li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                      </div>
-                                      <div class="sub-menu-nav">
-                                        <button onclick="location.href='{% url 'home' %}#prestation'" class="nav-btn">Prestations</button>
-                                        <div class="sub-menu-alt">
-                                            <ul>
-                                            {% for prestation in prestations %}
-                                                    <li><a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a></li>
-                                            {% endfor %}
-                                            </ul>
-                                        </div>
-                                      </div>
-                                      <div class="sub-menu-nav">
-                                        <button onclick="location.href='{% url 'home' %}#formation'" class="nav-btn">Formation</button>
-                                        <div class="sub-menu-alt">
-                                            <ul>
-                                                {% for formation in formations %}
-                                                    <li><a href="{% url 'home' %}#{{formation.titre}}">{{formation.titre}}</a></li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                      </div>
-                                      <div class="sub-menu-nav">
-                                        <button onclick="location.href='{% url 'home' %}#consulting'" class="nav-btn">Consulting</button>
-                                        <div class="sub-menu-alt">
-                                            <ul>
-                                                {% for consulting in consultings %}
-                                                    <li><a href="{% url 'home' %}#{{consulting.titre}}">{{consulting.titre}}</a></li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                      </div>
-                                      <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'home' %}#références'" class="nav-btn">Réferences</button>
-                                  </div>
-                                  <div class="sub-menu-nav">
-                                    <button onclick="location.href='{% url 'produit' %}#contact'" class="nav-btn">Contact</button>
-                                  </div>
+        <!--Start Navigation-->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sub-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-bars"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--Start Logo -->
+                        <div class="logo-nav">
+                            <a href="{% url 'home' %}">
+                                <img src="{% static 'images/apple-touch-icon.png' %}" alt="Company logo" height="50px" width="80px" />
+                            </a>
+                        </div>
+                        <!--End Logo -->
+                        <div class="clear-toggle"></div>
+                        <div class="sub-menu">
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
                             </div>
-                        </div><!-- end main-menu -->
-                    </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}#about'" class="nav-btn">About</button>
+                            </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
+                                <div class="sub-menu-alt">
+                                    <ul>
+                                        {% for produit in produits %}
+                                            <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}#prestation'" class="nav-btn">Prestations</button>
+                                <div class="sub-menu-alt">
+                                    <ul>
+                                        {% for prestation in prestations %}
+                                            <li><a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}#formation'" class="nav-btn">Formation</button>
+                                <div class="sub-menu-alt">
+                                    <ul>
+                                        {% for formation in formations %}
+                                            <li><a href="{% url 'home' %}#{{formation.titre}}">{{formation.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}#consulting'" class="nav-btn">Consulting</button>
+                                <div class="sub-menu-alt">
+                                    <ul>
+                                        {% for consulting in consultings %}
+                                            <li><a href="{% url 'home' %}#{{consulting.titre}}">{{consulting.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}#références'" class="nav-btn">Réferences</button>
+                            </div>
+                            <div class="sub-menu-nav">
+                                <button onclick="location.href='{% url 'home' %}#contact'" class="nav-btn">Contact</button>
+                            </div>
+                        </div>
+                    </div><!-- end main-menu -->
                 </div>
             </div>
         </header>
-    <!--End Navigation-->
+        <!--End Navigation-->
 
-  <section id="page-header" class="parallax">
-      <div class="overlay"></div>
+        <section id="page-header" class="parallax">
+            <div class="overlay"></div>
 			<div class="container">
 				<h1>Produit</h1>
                 <div class="breadcrumb">
@@ -139,111 +134,98 @@
 							<a href="{% url 'produit' %}">Produits</a>
 						</li>
 					</ul>
-				</div>
-                <!--End Breadcrumb-->
+				</div><!--End Breadcrumb-->
             </div>
-      </div>
-  </section>
+        </section>
 		<!--End page-header -->
-  {% for produit in produits %}
-  <section id="{{produit.titre}}" class="section">
-      <div class="title-box text-center">
+        {% for produit in produits %}
+        <section id="{{produit.titre}}" class="section">
+            <div class="title-box text-center">
                 <h2 class="title">{{produit.titre}}</h2>
-      </div>
-      <div class="container">
-          <div class="tab-pane" id="tab-content-5">
-                <div class="tab-content-5">
-                    <div class="col-md-6">
-                         <div class="core-features">
-                             <h4>Description :</h4>
-                             <p>{{produit.big_desc|linebreaks}}</p>
-                             <h4>Fonctionnalités :</h4>
-                             <p>{{produit.fonc|linebreaks}}</p>
-                             <h4>{{produit.titre_other}}</h4>
-                             <p>{{produit.desc_other|linebreaks}}</p>
-                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="devices-image">
-                            <img src="{{produit.image.url}}" alt=""/>
+            </div>
+            <div class="container">
+                <div class="tab-pane" id="tab-content-5">
+                    <div class="tab-content-5">
+                        <div class="col-md-6">
+                            <div class="core-features">
+                                <h4>Description :</h4>
+                                <p>{{produit.big_desc|linebreaks}}</p>
+                                <h4>Fonctionnalités :</h4>
+                                <p>{{produit.fonc|linebreaks}}</p>
+                                <h4>{{produit.titre_other}}</h4>
+                                <p>{{produit.desc_other|linebreaks}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="devices-image">
+                                <img src="{{produit.image.url}}" alt=""/>
+                            </div>
                         </div>
                     </div>
                 </div>
-          </div>
-      </div>
-  </section>
-  {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
 
-   <!--Start Contact-->
-   <section id="contact" class="section parallax">
-      <div class="overlay"></div>
-       <div class="container">
-           <div class="row">
-
-                 <div class="title-box text-center white">
-                    <h2 class="title">Contact</h2>
-                 </div>
-             </div>
-
-               <!--Start contact form-->
-               <div class="col-md-8 col-md-offset-2 contact-form">
-
+        <!--Start Contact-->
+        <section id="contact" class="section parallax">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="title-box text-center white">
+                        <h2 class="title">Contact</h2>
+                    </div>
+                </div>
+                <!--Start contact form-->
+                <div class="col-md-8 col-md-offset-2 contact-form">
                     <div class="contact-info text-center">
                         <p>06 61 30 59 68 / 022 27 51 66</p>
                         <p>03 Rue Calavon Elkaram II Rez de Chaussée N : 03 </p>
                         <p>Quartier des Hôpitaux 20340 Casablanca</p>
                         <p><a href = "mailto: hassan.ayadi.pac@gmail.com">hassan.ayadi.pac@gmail.com</a></p>
                     </div>
-               </div>
-              <!--End contact form-->
-
-       </div> <!-- /.container-->
-   </section>
-   <!--End Contact-->
+                </div><!--End contact form-->
+            </div> <!-- /.container-->
+        </section>
+        <!--End Contact-->
 
 
-<!--Start Footer-->
-   <footer>
-       <div class="container">
-           <div class="row">
-               <!--Start copyright-->
-               <div class="col-md-6 col-sm-6 col-xs-6">
-                   <div class="copyright"><p>Copyright © 2021 All Rights reserved by: <a href="https://www.linkedin.com/in/khalil-jemghili-18619b1ba/">Jemghili Khalil</a>
-                 </p></div>
-               </div>
-               <!--End copyright-->
-
-               <!--start social icons-->
-               <div class="col-md-6 col-sm-6 col-xs-6">
-                   <div class="social-icons">
-                       <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li> <a href="https://www.linkedin.com/company/process-automation-consulting/about/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                       </ul>
+        <!--Start Footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <!--Start copyright-->
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="copyright">
+                            <p>Copyright © 2021 All Rights reserved by: <a href="https://www.linkedin.com/in/khalil-jemghili-18619b1ba/">Jemghili Khalil</a></p>
+                        </div>
                     </div>
-               </div>
-               <!--End social icons-->
-           </div> <!-- /.row-->
-       </div> <!-- /.container-->
-   </footer>
-
-   <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
-
-    <!--Plugins-->
-	<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-
-
-
- </body>
+                    <!--End copyright-->
+                    <!--start social icons-->
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li> <a href="https://www.linkedin.com/company/process-automation-consulting/about/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!--End social icons-->
+                </div> <!-- /.row-->
+            </div> <!-- /.container-->
+        </footer>
+        <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+        <!--Plugins-->
+        <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+    </body>
 </html>
 
