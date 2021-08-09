@@ -370,6 +370,12 @@ section {
 	color:#000;
 }
 
+.center1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn-white {
 	background:#FFF;
 	border-color: FFFF;
