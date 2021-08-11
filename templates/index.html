@@ -238,13 +238,7 @@
                 <ul class="work-grid">
                     {% for produit in produits %}
                         <!-- Produit Item -->
-                            {% if produit.filter == "shaft alignment" %}
-                                <li class="work-item thumnail-img mix shaft alignment">
-                            {% elif produit.filter == "CONDITION MONITORING" %}
-                                <li class="work-item thumnail-img mix CONDITION MONITORING">
-                            {% else %}
-                                <li class="work-item thumnail-img mix">
-                            {% endif %}
+                        <li class="work-item thumnail-img mix {{produit.filter.filter}}">
                             <div class="work-image">
                                 <img src="{{produit.image.url}}" class="rounded float-right">
                                 <!--Hover link-->
@@ -255,17 +249,14 @@
                                     <a href="{{produit.image.url}}" class="popup-image">
                                         <i class="fa fa-plus"></i>
                                     </a>
-                                </div>
-                                <!--End link-->
+                                </div><!--End link-->
                                 <!--Hover Caption-->
                                 <div class="work-caption">
                                     <h4>{{produit.titre}}</h4>
                                     <p>{{produit.small_desc | linebreaks}}</p>
-                                </div>
-                                <!--End Caption-->
+                                </div><!--End Caption-->
                             </div>
-                        </li>
-                        <!--End Produit Item -->
+                        </li><!--End Produit Item -->
                     {% endfor %}
                 </ul>
             </div>

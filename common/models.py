@@ -50,7 +50,7 @@ class Produit(models.Model):
     image10 = models.ImageField(upload_to='users/', null=True, blank=True)
     pdf = models.FileField(upload_to='users/pdfs', null=True, blank=True)
     pdf2 = models.FileField(upload_to='users/pdfs', null=True, blank=True)
-    filter = models.ForeignKey(Filters, null=True, on_delete=models.SET_NULL)
+    filter = models.ForeignKey(Filters, blank=True,null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.titre
