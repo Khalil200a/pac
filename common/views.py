@@ -8,7 +8,8 @@ def detail(request):
     formations = Formation.objects.all()
     consultings = Consulting.objects.all()
     prestations = Prestation.objects.all()
-    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations}
+    filters = Filters.objects.all()
+    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations, 'filters':filters}
     return render(request, 'index.html', context=context)
 
 def pro(request):
@@ -16,5 +17,6 @@ def pro(request):
     formations = Formation.objects.all()
     consultings = Consulting.objects.all()
     prestations = Prestation.objects.all()
-    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations}
+    filters = Filters.objects.all()
+    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations, 'filters':filters}
     return render(request, 'produit.html', context=context)

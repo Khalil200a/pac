@@ -24,6 +24,12 @@ class Consulting(models.Model):
     def __str__(self):
         return self.titre
 
+class Filters(models.Model):
+    filter = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.filter
+
 
 class Produit(models.Model):
     titre = models.CharField(max_length=200)
@@ -44,9 +50,9 @@ class Produit(models.Model):
     image10 = models.ImageField(upload_to='users/', null=True, blank=True)
     pdf = models.FileField(upload_to='users/pdfs', null=True, blank=True)
     pdf2 = models.FileField(upload_to='users/pdfs', null=True, blank=True)
-    height = models.CharField(max_length=200, blank=True)
-    width = models.CharField(max_length=200, blank=True)
-    filter = models.CharField(max_length=200, blank=True)
+    filter = models.ForeignKey(Filters, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.titre
+
+

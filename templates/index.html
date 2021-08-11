@@ -228,8 +228,9 @@
                 <!-- Filtering -->
                 <ul class="filtering">
                     <li class="filter" data-filter="all">All</li>
-                    <li class="filter" data-filter="shaft alignment">shaft alignment</li>
-                    <li class="filter" data-filter="CONDITION MONITORING">CONDITION MONITORING</li>
+                    {% for filter in filters %}
+                        <li class="filter" data-filter="{{filter.filter}}">{{filter.filter}}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="work-main">
