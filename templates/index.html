@@ -71,11 +71,19 @@
                             <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
                                 <div class="sub-menu-alt">
-
-                                        {% for produit in produits %}
-                                            <a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a>
+                                    <ul>
+                                        {% for filter in filters %}
+                                            <div class="sub-menu-nav">
+                                                <li><a href="#">{{filter.filter}}</a>
+                                                    {% for produit in produits %}
+                                                        {% if produit.filter.filter == filter.filter %}
+                                                            <a href="{% url 'produit' %}#{{produit.produit}}">{{produit.titre}}</a>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </li>
+                                            </div>
                                         {% endfor %}
-
+                                    </ul>
                                 </div>
                             </div>
                             <div class="sub-menu-nav">
