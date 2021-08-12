@@ -71,11 +71,11 @@
                             <div class="sub-menu-nav">
                                 <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
                                 <div class="sub-menu-alt">
-                                    <ul>
+
                                         {% for produit in produits %}
-                                            <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a></li>
+                                            <a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a>
                                         {% endfor %}
-                                    </ul>
+
                                 </div>
                             </div>
                             <div class="sub-menu-nav">
