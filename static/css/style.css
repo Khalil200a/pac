@@ -17,77 +17,54 @@ html, body {
 }
 
 .sub-menu {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
+    list-style:none inside;
+    display: flex;
+    margin:0;
+    padding:0;
+    text-align:center;
+    }
 
-.sub-menu a {
-  float: left;
-  font-size: 16px;
-  min-width: 90px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: all .5s;
-}
+.sub-menu li {
+    display:block;
+    position:relative;
+    float:left;
+    }
 
-.active {
-  background: #2C3E50;
+.sub-menu li ul{
+   background-color: #2C3E50;
+    }
+.sub-menu-nav{
+margin-top: 15px;
 }
+.sub-menu li a {
+    display:block;
+    padding:0;
+    text-decoration:none;
+    width:150px; /* this is the width of the menu items */
+    line-height:35px; /* this is the hieght of the menu items */
+    color:#ffffff; /* list item font color */
+    }
+.sub-menu li li a {font-size:80%;} /* smaller font size for sub menu items */
 
-.sub-menu-nav {
-  float: left;
-  overflow: hidden;
-}
+.sub-menu li:hover {background-color: black;}
 
-.sub-menu-nav .nav-btn {
-  cursor:pointer;
-  min-width: 120px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  margin-top: 5px;
-  transition: all .5s;
-}
-li{
-  list-style-type: none;
-}
+/*--- Sublist Styles ---*/
+.sub-menu ul {
+    position:absolute;
+    padding:0;
+    left:0;
+    display:none; /* hides sublists */
+    }
 
-.sub-menu a:hover, .sub-menu-nav:hover .nav-btn {
-  background-color: #2C3E50;
-}
+.sub-menu li:hover ul ul {display:none;} /* hides sub-sublists */
 
-.sub-menu-alt {
-  display: none;
-  position: absolute;
-  background-color: #2C3E50;
-  z-index: 1;
-}
+.sub-menu li:hover ul {display:block;} /* shows sublist on hover */
 
-.sub-menu-alt ul li a {
-  min-width: 90px;
-  float: left;
-  color: white;
-  text-decoration: none;
-}
-
-.sub-menu-alt ul li a:hover {
-  background-color: #eee;
-  color: #000;
-}
-
-.sub-menu-nav:hover .sub-menu-alt {
-  display: block;
-}
-
-
+.sub-menu li li:hover ul {
+    display:block; /* shows sub-sublist on hover */
+    margin-left:150px; /* this should be the same width as the parent list item */
+    margin-top:-35px; /* aligns top of sub menu with top of list item */
+    }
 @media screen and (max-width: 600px) {
   .sub-menu {
       flex-direction: column;

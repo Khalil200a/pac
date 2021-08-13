@@ -61,60 +61,60 @@
                         </div>
                         <!--End Logo -->
                         <div class="clear-toggle"></div>
-                        <div class="sub-menu">
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}'" class="nav-btn">Home</button>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#about'" class="nav-btn">About</button>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
-                                <div class="sub-menu-alt">
-                                    <ul>
-                                        {% for produit in produits %}
-                                            <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#prestation'" class="nav-btn">Prestations</button>
-                                <div class="sub-menu-alt">
-                                    <ul>
-                                        {% for prestation in prestations %}
-                                            <li><a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#formation'" class="nav-btn">Formation</button>
-                                <div class="sub-menu-alt">
-                                    <ul>
-                                        {% for formation in formations %}
-                                            <li><a href="{% url 'home' %}#{{formation.titre}}">{{formation.titre}}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#consulting'" class="nav-btn">Consulting</button>
-                                <div class="sub-menu-alt">
-                                    <ul>
-                                        {% for consulting in consultings %}
-                                            <li><a href="{% url 'home' %}#{{consulting.titre}}">{{consulting.titre}}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#références'" class="nav-btn">Réferences</button>
-                            </div>
-                            <div class="sub-menu-nav">
-                                <button onclick="location.href='{% url 'home' %}#contact'" class="nav-btn">Contact</button>
-                            </div>
-                        </div>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}" class="nav.btn">Home</a>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}#about" class="nav.btn">About</a>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'produit' %}" class="nav.btn">Produit</a>
+                                <ul class="sub-menu-alt">
+                                    {% for filter in filters %}
+                                        <li><a href="#">{{filter.filter}}</a>
+                                            <ul>
+                                                {% for produit in produits %}
+                                                    {% if produit.filter.filter in filter.filter %}
+                                                        <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}#prestation" class="nav.btn">Prestations</a>
+                                <ul class="sub-menu-alt">
+                                    {% for prestation in prestations %}
+                                        <li><a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
+                                <ul class="sub-menu-alt">
+                                    {% for formation in formations %}
+                                        <li><a href="{% url 'home' %}#{{formation.titre}}">{{formation.titre}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
+                                <ul class="sub-menu-alt">
+                                    {% for consulting in consultings %}
+                                        <li><a href="{% url 'home' %}#{{consulting.titre}}">{{consulting.titre}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}#références" class="nav.btn">Réferences</a>
+                            </li>
+                            <li class="sub-menu-nav">
+                                <a href="{% url 'home' %}#contact" class="nav.btn">Contact</a>
+                            </li>
+                        </ul>
                     </div><!-- end main-menu -->
                 </div>
             </div>
