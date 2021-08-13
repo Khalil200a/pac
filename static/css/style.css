@@ -83,18 +83,8 @@ li{
   color: #000;
 }
 
-.sub-menu-nav .sub-menu-alt:hover ul li a:hover ul {
-  display: none;
-}
-
 .sub-menu-nav:hover .sub-menu-alt {
   display: block;
-}
-
-.sub-menu-nav:hover .sub-menu-alt li li:hover ul  {
-  display: block;
-  margin-left:200px; /* this should be the same width as the parent list item */
-  margin-top:-35px;
 }
 
 

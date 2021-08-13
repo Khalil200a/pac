@@ -72,16 +72,8 @@
                                 <button onclick="location.href='{% url 'produit' %}'" class="nav-btn">Produit</button>
                                 <div class="sub-menu-alt">
                                     <ul>
-                                        {% for filter in filters %}
-                                            <div class="sub-menu-nav">
-                                                <li><a href="#">{{filter.filter}}</a>
-                                                    {% for produit in produits %}
-                                                        {% if produit.filter.filter == filter.filter %}
-                                                            <a href="{% url 'produit' %}#{{produit.produit}}">{{produit.titre}}</a>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </li>
-                                            </div>
+                                        {% for produit in produits %}
+                                            <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </div>
