@@ -72,11 +72,11 @@
                                 <a href="{% url 'produit' %}" class="nav.btn">Produit</a>
                                 <ul class="sub-menu-alt">
                                     {% for filter in filters %}
-                                        <li><a href="#">{{filter.filter}}</a>
+                                        <li><a href="#">•{{filter.filter}}</a>
                                             <ul>
                                                 {% for produit in produits %}
                                                     {% if produit.filter.filter in filter.filter %}
-                                                        <li><a href="{% url 'produit' %}#{{produit.titre}}">{{produit.titre}}</a>
+                                                        <li><a href="{% url 'produit' %}#{{produit.titre}}">•{{produit.titre}}</a>
                                                     {% endif %}
                                                 {% endfor %}
                                             </ul>
@@ -88,7 +88,7 @@
                                 <a href="{% url 'home' %}#prestation" class="nav.btn">Prestations</a>
                                 <ul class="sub-menu-alt">
                                     {% for prestation in prestations %}
-                                        <li><a href="{% url 'home' %}#{{prestation.titre}}">{{prestation.titre}}</a></li>
+                                        <li><a href="{% url 'home' %}#{{prestation.titre}}">•{{prestation.titre}}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -96,7 +96,7 @@
                                 <a href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
                                 <ul class="sub-menu-alt">
                                     {% for formation in formations %}
-                                        <li><a href="{% url 'home' %}#{{formation.titre}}">{{formation.titre}}</a></li>
+                                        <li><a href="{% url 'home' %}#{{formation.titre}}">•{{formation.titre}}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -104,7 +104,7 @@
                                 <a href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
                                 <ul class="sub-menu-alt">
                                     {% for consulting in consultings %}
-                                        <li><a href="{% url 'home' %}#{{consulting.titre}}">{{consulting.titre}}</a></li>
+                                        <li><a href="{% url 'home' %}#{{consulting.titre}}">•{{consulting.titre}}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
