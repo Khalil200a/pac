@@ -47,7 +47,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sub-menu">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".tbn">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="fa fa-bars"></span>
                             <span class="icon-bar"></span>
@@ -61,60 +61,62 @@
                         </div>
                         <!--End Logo -->
                         <div class="clear-toggle"></div>
-                        <ul class="sub-menu">
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}" class="nav.btn">Home</a>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}#about" class="nav.btn">About</a>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'produit' %}" class="nav.btn">Produit</a>
-                                <ul class="sub-menu-alt">
-                                    {% for filter in filters %}
-                                        <li><a href="#">• {{filter.filter}}</a>
-                                            <ul>
-                                                {% for produit in produits %}
-                                                    {% if produit.filter.filter in filter.filter %}
-                                                        <li><a href="{% url 'produit' %}#{{produit.titre}}">• {{produit.titre}}</a>
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </ul>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}#prestation" class="nav.btn">Prestations</a>
-                                <ul class="sub-menu-alt">
-                                    {% for prestation in prestations %}
-                                        <li><a href="{% url 'home' %}#{{prestation.titre}}">• {{prestation.titre}}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
-                                <ul class="sub-menu-alt">
-                                    {% for formation in formations %}
-                                        <li><a href="{% url 'home' %}#{{formation.titre}}">• {{formation.titre}}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
-                                <ul class="sub-menu-alt">
-                                    {% for consulting in consultings %}
-                                        <li><a href="{% url 'home' %}#{{consulting.titre}}">• {{consulting.titre}}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}#références" class="nav.btn">Réferences</a>
-                            </li>
-                            <li class="sub-menu-nav">
-                                <a href="{% url 'home' %}#contact" class="nav.btn">Contact</a>
-                            </li>
-                        </ul>
+                        <div class="tbn">
+                            <ul class="sub-menu">
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}" class="nav.btn">Home</a>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}#about" class="nav.btn">About</a>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'produit' %}" class="nav.btn">Produit</a>
+                                    <ul class="sub-menu-alt">
+                                        {% for filter in filters %}
+                                            <li><a href="#">• {{filter.filter}}</a>
+                                                <ul>
+                                                    {% for produit in produits %}
+                                                        {% if produit.filter.filter in filter.filter %}
+                                                            <li><a href="{% url 'produit' %}#{{produit.titre}}">• {{produit.titre}}</a>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}#prestation" class="nav.btn">Prestations</a>
+                                    <ul class="sub-menu-alt">
+                                        {% for prestation in prestations %}
+                                            <li><a href="{% url 'home' %}#{{prestation.titre}}">• {{prestation.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
+                                    <ul class="sub-menu-alt">
+                                        {% for formation in formations %}
+                                            <li><a href="{% url 'home' %}#{{formation.titre}}">• {{formation.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
+                                    <ul class="sub-menu-alt">
+                                        {% for consulting in consultings %}
+                                            <li><a href="{% url 'home' %}#{{consulting.titre}}">• {{consulting.titre}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}#références" class="nav.btn">Réferences</a>
+                                </li>
+                                <li class="sub-menu-nav">
+                                    <a href="{% url 'home' %}#contact" class="nav.btn">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div><!-- end main-menu -->
                 </div>
             </div>
