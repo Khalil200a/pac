@@ -97,7 +97,9 @@
                                     <a href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
                                     <ul class="sub-menu-alt">
                                         {% for formation in formations %}
-                                            <li><a href="{% url 'home' %}#{{formation.titre}}">• {{formation.titre}}</a></li>
+                                            {% if formation.necessity == 1 %}
+                                                <li><a href="{% url 'home' %}#{{formation.titre}}">• {{formation.titre}}</a></li>
+                                            {% endif %}
                                         {% endfor %}
                                     </ul>
                                 </li>
