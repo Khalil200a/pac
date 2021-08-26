@@ -26,6 +26,7 @@ class Consulting(models.Model):
     def __str__(self):
         return self.titre
 
+
 class Filters(models.Model):
     filter = models.CharField(max_length=200)
 
@@ -58,3 +59,9 @@ class Produit(models.Model):
         return self.titre
 
 
+class Actualite(models.Model):
+    titre = models.CharField(max_length=200)
+    contenu = models.TextField(max_length=10000, blank=True)
+
+    def __str__(self):
+        return self.titre

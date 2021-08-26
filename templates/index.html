@@ -143,9 +143,9 @@
                     <li class="secondary">
                         <div class="slider-text-wrapper">
                             <div class="container">
-                                <div class="big">PRESTATIONS</div>
-                                <div class="small">Expertise vibratoire, Analyse de structure...</div>
-                                <a href="#prestation" class=" middle btn btn-white">VOIR NOS PRESTATIONS</a>
+                                <div class="big">ACTUALITES</div>
+                                <div class="small">voir tout nos Actualités et nos événements</div>
+                                <a href="#actualites" class=" middle btn btn-white">VOIR NOS ACTUALITES</a>
                             </div>
                         </div>
                         <img src="{% static 'images/slider/shaft.jpg' %}" alt="">
@@ -221,6 +221,28 @@
         </section>
         <!--End About-->
 
+        <section id="actualites" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="title-box text-center">
+                        <h2 class="title">Presatations</h2>
+                    </div>
+                </div>
+                <!-- Prestation -->
+                <div class="team-items team-carousel">
+                   {% for prestation in prestations %}
+                        <div id="{{prestation.titre}}" class="item">
+                            <h4>{{prestation.titre}}</h4>
+                            <p>{{prestation.contenu|linebreaks}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- End Prestation -->
+            </div>
+            <!-- End Content -->
+        </section>
+        <!--End Team-->
+
         <!--Start Produit-->
         <section id="produit" class="section">
             <!-- Filtering -->
@@ -271,15 +293,15 @@
             <div class="container">
                 <div class="row">
                     <div class="title-box text-center">
-                        <h2 class="title">Presatations</h2>
+                        <h2 class="title">Actualités et événements</h2>
                     </div>
                 </div>
-                <!-- Prestation -->
+                <!-- Actualités -->
                 <div class="team-items team-carousel">
-                   {% for prestation in prestations %}
-                        <div id="{{prestation.titre}}" class="item">
-                            <h4>{{prestation.titre}}</h4>
-                            <p>{{prestation.contenu|linebreaks}}</p>
+                   {% for actualite in actualites %}
+                        <div id="{{actualite.titre}}" class="item">
+                            <h4>{{actualite.titre}}</h4>
+                            <p>{{actualite.contenu|linebreaks}}</p>
                         </div>
                     {% endfor %}
                 </div>

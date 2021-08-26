@@ -18,5 +18,6 @@ def pro(request):
     consultings = Consulting.objects.all()
     prestations = Prestation.objects.all()
     filters = Filters.objects.all()
-    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations, 'filters':filters}
+    actualites = Actualite.objects.all()
+    context = {'produits': produits, 'formations': formations, 'consultings': consultings, 'prestations': prestations, 'filters':filters, 'actualites':actualites}
     return render(request, 'produit.html', context=context)
