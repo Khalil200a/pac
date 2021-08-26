@@ -225,15 +225,15 @@
             <div class="container">
                 <div class="row">
                     <div class="title-box text-center">
-                        <h2 class="title">Presatations</h2>
+                        <h2 class="title">Actualités et événements</h2>
                     </div>
                 </div>
-                <!-- Prestation -->
+                <!-- Actualites -->
                 <div class="team-items team-carousel">
-                   {% for prestation in prestations %}
-                        <div id="{{prestation.titre}}" class="item">
-                            <h4>{{prestation.titre}}</h4>
-                            <p>{{prestation.contenu|linebreaks}}</p>
+                   {% for actualite in actualites %}
+                        <div id="{{actualite.titre}}" class="item">
+                            <h4>{{actualite.titre}}</h4>
+                            <p>{{actualite.contenu|linebreaks}}</p>
                         </div>
                     {% endfor %}
                 </div>
@@ -293,15 +293,15 @@
             <div class="container">
                 <div class="row">
                     <div class="title-box text-center">
-                        <h2 class="title">Actualités et événements</h2>
+                        <h2 class="title">Presatations</h2>
                     </div>
                 </div>
-                <!-- Actualités -->
+                <!-- Prestation -->
                 <div class="team-items team-carousel">
-                   {% for actualite in actualites %}
-                        <div id="{{actualite.titre}}" class="item">
-                            <h4>{{actualite.titre}}</h4>
-                            <p>{{actualite.contenu|linebreaks}}</p>
+                   {% for prestation in prestations %}
+                        <div id="{{prestation.titre}}" class="item">
+                            <h4>{{prestation.titre}}</h4>
+                            <p>{{prestation.contenu|linebreaks}}</p>
                         </div>
                     {% endfor %}
                 </div>
