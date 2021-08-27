@@ -89,7 +89,9 @@
                                     <a href="{% url 'home' %}#prestation" class="nav.btn">Prestations</a>
                                     <ul class="sub-menu-alt">
                                         {% for prestation in prestations %}
-                                            <li><a href="{% url 'home' %}#{{prestation.titre}}">• {{prestation.titre}}</a></li>
+                                            {% if prestation.necessity == 1 %}
+                                                <li><a href="{% url 'home' %}#{{prestation.titre}}">• {{prestation.titre}}</a></li>
+                                            {% endif %}
                                         {% endfor %}
                                     </ul>
                                 </li>
@@ -107,7 +109,9 @@
                                     <a href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
                                     <ul class="sub-menu-alt">
                                         {% for consulting in consultings %}
-                                            <li><a href="{% url 'home' %}#{{consulting.titre}}">• {{consulting.titre}}</a></li>
+                                            {% if consulting.necessity == 1 %}
+                                                <li><a href="{% url 'home' %}#{{consulting.titre}}">• {{consulting.titre}}</a></li>
+                                            {% endif %}
                                         {% endfor %}
                                     </ul>
                                 </li>
