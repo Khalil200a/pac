@@ -22,6 +22,7 @@ html, body {
     margin:0;
     padding:0;
     text-align:center;
+	justify-content: center;
     }
 
 .sub-menu li {
@@ -38,13 +39,13 @@ margin-top: 10px;
 }
 .sub-menu li a {
     display:block;
-    padding:0;
+    padding:0 10px;
     text-decoration:none;
-    min-width:100%; /* this is the width of the menu items */
+    width:100px; /* this is the width of the menu items */
     line-height:35px; /* this is the hieght of the menu items */
     color:#ffffff; /* list item font color */
     }
-.sub-menu li li a {font-size:80%;} /* smaller font size for sub menu items */
+.sub-menu li li a {font-size:80%; width: 215px;} /* smaller font size for sub menu items */
 
 .sub-menu li:hover {background-color: black;}
 
@@ -62,7 +63,7 @@ margin-top: 10px;
 
 .sub-menu li li:hover ul {
     display:block; /* shows sub-sublist on hover */
-    margin-left:150px; /* this should be the same width as the parent list item */
+    margin-left:215px; /* this should be the same width as the parent list item */
     margin-top:-35px; /* aligns top of sub menu with top of list item */
     }
 @media screen and (max-width: 600px) {

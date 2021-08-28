@@ -67,10 +67,10 @@
                                     <a href="{% url 'home' %}" class="nav.btn">Home</a>
                                 </li>
                                 <li class="sub-menu-nav">
-                                    <a href="{% url 'home' %}#about" class="nav.btn">About</a>
+                                    <a class="nav-btn" href="{% url 'home' %}#about" class="nav.btn">About</a>
                                 </li>
                                 <li class="sub-menu-nav">
-                                    <a href="{% url 'produit' %}" class="nav.btn">Produit</a>
+                                    <a  href="{% url 'produit' %}" class="nav.btn">Produit</a>
                                     <ul class="sub-menu-alt">
                                         {% for filter in filters %}
                                             <li><a href="#">• {{filter.filter}}</a>
@@ -96,7 +96,7 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu-nav">
-                                    <a href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
+                                    <a  href="{% url 'home' %}#formation" class="nav-btn">Formation</a>
                                     <ul class="sub-menu-alt">
                                         {% for formation in formations %}
                                             {% if formation.necessity == 1 %}
@@ -106,7 +106,7 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu-nav">
-                                    <a href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
+                                    <a  href="{% url 'home' %}#consulting" class="nav-btn">Consulting</a>
                                     <ul class="sub-menu-alt">
                                         {% for consulting in consultings %}
                                             {% if consulting.necessity == 1 %}
@@ -116,7 +116,7 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu-nav">
-                                    <a href="{% url 'home' %}#références" class="nav.btn">Réferences</a>
+                                    <a  href="{% url 'home' %}#références" class="nav.btn">Réferences</a>
                                 </li>
                                 <li class="sub-menu-nav">
                                     <a href="{% url 'home' %}#contact" class="nav.btn">Contact</a>
