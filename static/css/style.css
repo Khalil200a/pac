@@ -40,7 +40,7 @@ margin-top: 10px;
     display:block;
     padding:0;
     text-decoration:none;
-    width:150px; /* this is the width of the menu items */
+    min-width:100%; /* this is the width of the menu items */
     line-height:35px; /* this is the hieght of the menu items */
     color:#ffffff; /* list item font color */
     }
